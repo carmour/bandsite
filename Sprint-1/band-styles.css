@@ -135,7 +135,7 @@ body {
   color: #323232;
   font-family: semi-bold-font;
   font-size: 1.3rem;
-  padding: 2vh 2vh;
+  padding: 2vh;
 }
 
 @media (min-width: 768px) {
@@ -201,6 +201,20 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+}
+
+.photo__gallery--photo:hover {
+  -webkit-filter: none;
+          filter: none;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  z-index: 1;
 }
 
 .home__footer {
