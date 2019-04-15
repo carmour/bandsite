@@ -109,7 +109,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   font-size: 2rem;
-  padding-left: 5%;
+  padding-left: 3vw;
   padding-right: 25%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -118,7 +118,7 @@ body {
 
 .bio__header, .photo__gallery--title, .home__footer--header {
   color: #323232;
-  padding-left: 5%;
+  padding-left: 3vw;
   font-family: bold-font;
   font-size: 2rem;
 }
@@ -126,7 +126,7 @@ body {
 .band__photo, .photo__gallery--photo {
   width: 100%;
   height: auto;
-  padding: 0 4%;
+  padding: 0 3vw;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -197,7 +197,7 @@ body {
 }
 
 .photo__gallery--photo {
-  padding: 1vh 3vh;
+  padding: 1vh 3vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -215,11 +215,12 @@ body {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   z-index: 1;
+  overflow: hidden;
 }
 
 .home__footer {
   background-color: #323232;
-  padding: 7vh 2vh;
+  padding: 7vh 3vw;
 }
 
 .home__footer * {
@@ -277,7 +278,7 @@ body {
   margin-right: 15vh;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 650px) {
   .page__header {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -289,10 +290,10 @@ body {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
-    padding-right: 45vh;
+    padding-right: 35vw;
   }
   .header__title {
-    padding-bottom: 4vh;
+    padding: 2vh 0 4vh 0vw;
   }
   .header__nav--item {
     padding: 4vh 2vw;
@@ -308,18 +309,26 @@ body {
     font-size: 4rem;
     font-style: bold-font;
   }
+  .band__quote, .bio__title {
+    padding: 4vh 3vw 1vh 3vw;
+  }
+  .band__quote--name {
+    font-size: 1.5rem;
+    padding-left: 3vw;
+  }
   .bio__paragraphs {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    padding-bottom: 0;
+    padding: 2vh 1vw 0 1vw;
   }
-  .band__quote--name {
-    font-size: 1.5rem;
+  .photo__gallery {
+    padding: 0 2vw;
   }
   .photo__gallery--title {
     font-size: 2.5rem;
+    padding: 0 1vw;
   }
   .photo__gallery--photo {
     -webkit-box-orient: horizontal;
@@ -345,6 +354,7 @@ body {
     padding: 1vh;
   }
   .home__footer {
+    padding-top: 5vh;
     padding-bottom: 3vh;
   }
   .home__footer--tablet {
@@ -357,10 +367,12 @@ body {
     -ms-flex-line-pack: center;
         align-content: center;
   }
+  .home__footer--icons {
+    padding-right: 6vw;
+  }
   .home__footer--logo {
     display: initial;
-    padding-top: 2vh;
-    padding-left: 11vh;
+    padding: 2vh 2vw 0 10vw;
   }
   .home__footer--columns {
     display: -webkit-box;
@@ -395,7 +407,7 @@ body {
             justify-content: center;
   }
   .header__title {
-    padding-left: 15vw;
+    margin-left: 9vw;
   }
   .header__nav--item {
     font-size: 0.8rem;
@@ -464,7 +476,7 @@ body {
             align-items: center;
   }
   .home__footer--icons {
-    padding-right: 18vw;
+    padding-right: 15vw;
   }
   .home__footer--columns {
     padding-right: 11vw;

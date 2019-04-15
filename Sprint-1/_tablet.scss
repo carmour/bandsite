@@ -1,13 +1,12 @@
-@media (min-width: 768px) {
+@media (min-width: 650px) {
     .page__header {
         flex-direction: row;
         align-items: center;
         justify-content: space-evenly; 
-        // padding: 2vh;  
-        padding-right: 45vh;     
+        padding-right: 35vw;     
     }
     .header__title {
-        padding-bottom: 4vh;
+        padding: 2vh 0 4vh 0vw;
     }
     .header__nav {
         &--item {
@@ -15,11 +14,8 @@
             margin: 0 3vw;
         }
     }
-    // NEED TO FIGURE OUT WHER ETO PUT THIS FOR
-    // UNDERLINE
     #header__nav--current {
         border-bottom: 5px solid $white;
-        // height: 100%;
     }
     .hero__img {
         height: 55vh;
@@ -28,23 +24,30 @@
         font-size: 4rem;
         font-style: bold-font;
     }
-    .bio__paragraphs {
-        flex-direction: row;
-        padding-bottom: 0;
-    }
-    // @mixin header-font {
-    //     font-size: 3rem;
+    // .bio__title {
+        
     // }
+    .band__quote {
+        padding: 4vh 3vw 1vh 3vw;
+        // padding-left: 4%;
+        // padding-right: 4%;
+    }
     .band__quote--name {
         font-size: 1.5rem;
+        padding-left: 3vw;
+    }
+    .bio__paragraphs {
+        flex-direction: row;
+        padding: 2vh 1vw 0 1vw;
     }
     .photo__gallery {
+        padding: 0 2vw;
         &--title {
             font-size: 2.5rem;
+            padding: 0 1vw;
         }
         &--photo {
             flex-flow: row wrap;
-            // max-width: 33%;
             justify-content: space-evenly;
         }
         &--photos {
@@ -53,42 +56,35 @@
             & * {
                 width: 33%;
                 height: 33%;
-                // justify-content: space-evenly;
                 padding: 1vh;
             }
         }
     }
     .home__footer {
+        padding-top: 5vh;
         padding-bottom: 3vh;
         &--tablet {
             display: flex;
             justify-content: space-between;
             align-content: center;
         }
+        &--icons {
+            padding-right: 6vw;
+        }
         &--logo {
             display: initial;
-            padding-top: 2vh;
-            padding-left: 11vh;
+            padding: 2vh 2vw 0 10vw;
         }
         &--columns {
             display: flex;
             flex-flow: row wrap;
             justify-content: space-between;
-            // width: 33%;
-            // height: 33%;
-            // padding: 0 1vh
-            // justify-content: space-between;
         }
         &--column {
             display: flex;
             flex-flow: row wrap;
-            // width: 100%;
-            // justify-content: space-between;
             width: 33%;
             height: 33%;
-            // padding-right: 2vh;
-            // padding-left: 0;
-            // box-sizing: border-box;
         }
     }
 }

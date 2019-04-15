@@ -4,14 +4,13 @@
         justify-content: center;
     }
     .header__title {
-        padding-left: 15vw;
+        margin-left: 9vw;
     }
     .header__nav--item {
         font-size: 0.8rem;
         padding: 4vh 1vw;
     }
     .hero__img--caption {
-        // width: 25%;
         padding-right: 50vw;
         padding-left: 10vw;
         font-size: 2.5rem;
@@ -65,7 +64,7 @@
             align-items: center;
         }
         &--icons {
-            padding-right: 18vw;
+            padding-right: 15vw;
         }
         &--columns {
             padding-right: 11vw;
