@@ -1,5 +1,3 @@
-
-// SASS MATERIAL
 @import 'colors';
 
 @font-face {
@@ -155,12 +153,14 @@ body {
     line-height: 1.6rem;
 }
 
+// PHOTO GALLERY STYLES
 .photo__gallery {
     background-color: $alabaster;
     width: 100%;
     height: 100%;
     padding-bottom: 7vh;
     box-sizing: border-box;
+    overflow: hidden;
     &--title {
         @extend .bio__header;
         padding-top: 5vh;
@@ -176,7 +176,6 @@ body {
             filter: none;
             transform: scale(1.1);
             z-index: 1;
-            overflow: hidden;
         }
     }
 }
@@ -220,8 +219,8 @@ body {
 }
 
 #home__footer--legal {
-    padding-top: 8%;
-    margin-right: 15vh;
+    padding-top: 4vh;
+    margin-right: 15vw;
 }
 
 @import 'tablet';
