@@ -1,0 +1,86 @@
+@media (min-width: 1024px) {
+    .page__header {
+        padding-right: 50vw;
+        justify-content: center;
+    }
+    .header__title {
+        margin-left: 9vw;
+    }
+    .header__nav--item {
+        font-size: 0.8rem;
+        padding: 4vh 1vw;
+    }
+    .hero__img--caption {
+        padding-right: 50vw;
+        padding-left: 10vw;
+        font-size: 2.5rem;
+        font-family: bold-font;
+    }
+    .bio__header {
+        font-size: 1.8rem;
+        padding-left: 10vw;
+    }
+    .band__photo {
+        @include bio-positioning-desktop();
+    }
+    .band__quote {
+        font-size: 1.2rem;
+        padding: 5vh 0 4vh 0;
+        @include bio-positioning-desktop();
+        &--name {
+            font-family: semi-bold-font;
+            font-size: 0.8rem;
+            padding: 0;
+            @include bio-positioning-desktop();
+        }
+    }
+    .bio__title {
+        @include bio-positioning-desktop();
+        padding-bottom: 2vh;
+    }
+    .bio__paragraphs {
+        padding-left: 15.5vw;
+        padding-right: 15.5vw;
+        &--para {
+            font-size: 0.8rem;
+            line-height: 1.2rem;
+        }
+    }
+    .photo__gallery {
+        padding-bottom: 3vh;
+    }
+    .photo__gallery--photos {
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+    .photo__gallery--photo {
+        padding: 1vh;
+    }
+    .home__footer {
+        padding: 3vh 12vw 5vh 12vw;
+        &--header {
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+        &--icons {
+            padding-right: 15vw;
+        }
+        &--columns {
+            padding-right: 11vw;
+        }
+        &--columns * {
+            font-size: 0.8rem;
+            line-height: 1rem;
+        }
+        &--column {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    #home__footer--legal {
+        font-size: 0.8rem;
+        padding-top: 3vh;
+        padding-bottom: 0;
+    }
+}

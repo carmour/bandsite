@@ -1,0 +1,91 @@
+@import 'colors';
+@import 'fonts';
+
+body {
+    font-family: standard-font;
+}
+
+// SHOWS STYLES
+.about__img {
+    @extend .hero__img;
+    background-image: url('../bandsite-photos/keyboard-img.jpg');
+    min-height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4vw;
+    box-sizing: border-box;
+    // overflow: hidden;
+    &--title {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: $white;
+        display: flex;
+    }
+    &--caption {
+        @extend .hero__img--caption;
+        font-family: bold-font;
+        font-size: 2.5rem;
+        line-height: 3.5rem;
+        padding: 3vh 0vw;
+    }
+}
+
+.sound__byte {
+    width: 100%;
+    height: auto;
+    padding-top: 10vh;
+    border: none;
+    // display: flex;
+    // overflow: hidden;
+    // padding-left: 12vw;
+    // align-items: center; 
+    // justify-content: center;
+}
+// why can't I centre the soundcloud thing? needs to be centred in 
+// the margin of the img
+
+
+// change the display of the table cells so that they take up the
+// entire row?
+.shows {
+    padding: 2vw;
+    &__table {
+        width: 100%;
+    }
+    &__title {
+        color: $header-color;
+        font-family: bold-font;
+        font-size: 2rem;
+        padding: 6vw 0vw;
+        text-align: left;
+    }
+    // can't get this to sit at the bottom of the section????
+    // &__section {
+    //     border: solid $silver 1px;
+    // }
+    &__descriptor {
+        color: $silver;
+        font-weight: 550;
+        padding: 1vw 0;
+    }
+    &__date {
+        color: $header-color;
+        font-family: semi-bold-font;
+        padding: 1vw 0 4vw 0;
+    }
+    &__details {
+        color: $header-color;
+        font-weight: 400;
+        padding: 1vw 0 4vw 0;
+    }
+    &__tickets {
+        width: 100%;
+        text-align: center;
+        color: $white;
+        background-color: $header-color;
+        font-weight: 600;
+        padding: 3vh 0;
+        border-radius: 5px;
+    }
+}
