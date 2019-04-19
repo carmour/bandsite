@@ -59,6 +59,8 @@ body {
         padding: 6vw 0vw;
         text-align: left;
     }
+
+    
     // can't get this to sit at the bottom of the section????
     &__section {
         padding-bottom: 10vh;
@@ -70,6 +72,7 @@ body {
         font-weight: 550;
         padding: 1vw 0;
         display: block;
+
         // this is a very hacky way to get the border -- 
         // also, there is no border on the last item.
         &--first {
