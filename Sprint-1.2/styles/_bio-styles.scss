@@ -1,19 +1,5 @@
 @import 'colors';
 @import 'fonts';
-// @font-face {
-//     font-family: standard-font;
-//     src: url('../bandsite-fonts/AvenirNextRegular.otf');
-// }
-
-// @font-face {
-//     font-family: semi-bold-font;
-//     src: url('../bandsite-fonts/AvenirNextDemiBold.otf');
-// }
-
-// @font-face {
-//     font-family: bold-font;
-//     src: url('../bandsite-fonts/AvenirNextBold.otf');
-// }
 
 @mixin header-font {
     color: $header-color;
@@ -82,6 +68,7 @@ body {
         color: $silver;
     }
     // NEED TO FIX THIS SO THAT IT IS PASSIVELY SILVER
+    // but also white on hover
     &--item:hover {
         color: $white;
         transform: scale(1.9);

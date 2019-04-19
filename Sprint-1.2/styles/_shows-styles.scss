@@ -36,20 +36,19 @@ body {
     height: auto;
     padding-top: 10vh;
     border: none;
+    // border-radius: 10px;
     // display: flex;
     // overflow: hidden;
     // padding-left: 12vw;
     // align-items: center; 
     // justify-content: center;
 }
-// why can't I centre the soundcloud thing? needs to be centred in 
-// the margin of the img
-
 
 // change the display of the table cells so that they take up the
 // entire row?
 .shows {
     padding: 2vw;
+    padding-bottom: 6vh;
     &__table {
         width: 100%;
     }
@@ -61,24 +60,38 @@ body {
         text-align: left;
     }
     // can't get this to sit at the bottom of the section????
-    // &__section {
-    //     border: solid $silver 1px;
-    // }
+    &__section {
+        padding-bottom: 10vh;
+        margin-bottom: 100px;
+        border-bottom: solid $silver 1px;
+    }
     &__descriptor {
         color: $silver;
         font-weight: 550;
         padding: 1vw 0;
+        display: block;
+        // this is a very hacky way to get the border -- 
+        // also, there is no border on the last item.
+        &--first {
+            border-top: solid $silver 1px;
+            padding-top: 20px;
+            margin-top: 15px;
+        }
     }
     &__date {
         color: $header-color;
         font-family: semi-bold-font;
         padding: 1vw 0 4vw 0;
+        display: block;
     }
     &__details {
         color: $header-color;
         font-weight: 400;
         padding: 1vw 0 4vw 0;
+        display: block;
     }
+    // can't get the tickets button to actually be a button??
+    // just won't show up at all
     &__tickets {
         width: 100%;
         text-align: center;
@@ -87,5 +100,7 @@ body {
         font-weight: 600;
         padding: 3vh 0;
         border-radius: 5px;
+        display: block;
+
     }
 }

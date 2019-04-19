@@ -345,6 +345,7 @@ body {
 
 .shows {
   padding: 2vw;
+  padding-bottom: 6vh;
 }
 
 .shows__table {
@@ -359,22 +360,37 @@ body {
   text-align: left;
 }
 
+.shows__section {
+  padding-bottom: 10vh;
+  margin-bottom: 100px;
+  border-bottom: solid #AFAFAF 1px;
+}
+
 .shows__descriptor {
   color: #AFAFAF;
   font-weight: 550;
   padding: 1vw 0;
+  display: block;
+}
+
+.shows__descriptor--first {
+  border-top: solid #AFAFAF 1px;
+  padding-top: 20px;
+  margin-top: 15px;
 }
 
 .shows__date {
   color: #323232;
   font-family: semi-bold-font;
   padding: 1vw 0 4vw 0;
+  display: block;
 }
 
 .shows__details {
   color: #323232;
   font-weight: 400;
   padding: 1vw 0 4vw 0;
+  display: block;
 }
 
 .shows__tickets {
@@ -385,6 +401,7 @@ body {
   font-weight: 600;
   padding: 3vh 0;
   border-radius: 5px;
+  display: block;
 }
 
 @media (min-width: 650px) {
