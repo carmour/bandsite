@@ -18,31 +18,71 @@ var ourUsers = [
         comment: "How can someone be so good!!! You can tell he lives for this and loves to do it every day. Everytime I see him I feel instantly happy! He’s definitely my favorite ever!"
     }
 ];
-console.log(ourUsers[0].name)
-// ^^ THIS WILL CONSOLE LOG MICHAEL LYONS!!
+// function createOriginalComments() {
+//     for (var i = 0; i < ourUsers.length; i++) {
+//         var existingName = (ourUsers[i].name);
+//         // console.log(existingName)
+//         var createName = document.createElement('div');
+//         var ourName = document.querySelector('#ourName');
+//         var existingComment = (ourUsers[i].comment);
+//         // console.log(existingComment)
+//         var createComment = document.createElement('div');
+//         var ourComment = document.querySelector('#ourComment');
+//         createName.innerText = existingName.value;
+//         createComment.innerText = existingComment.value;
+//         ourName.appendChild(createName)
+//         ourComment.appendChild(createComment)
+//     }
+// }
+// createOriginalComments(ourUsers)
+
+// trying to remove some steps from the for loop
+for (var i = 0; i < ourUsers.length; i++) {
+    var existingName = (ourUsers[i].name);
+    var createName = document.createElement('div');
+    var ourName = document.querySelector('#ourName');
+    ourName.appendChild(createName)
+    createName.innerText = existingName.value;
+    var existingComment = (ourUsers[i].comment);
+    var createComment = document.createElement('div');
+    var ourComment = document.querySelector('#ourComment');
+    createComment.innerText = existingComment.value;
+    ourComment.appendChild(createComment)
+}
+// createOriginalComments(ourUsers)
 
 
 
 var button = document.querySelector('#comments__button');
 button.onclick = () => {
+    var newBox = document.querySelector('#newBox');
+    var newCommentBox = document.createElement('div')
+    newBox.appendChild(newCommentBox)
+
     var userName = document.querySelector('#userName');
     var nameContent = document.querySelector('#nameContent');
     var newName = document.createElement('div');
     var userComment = document.querySelector('#userComment');
     var commentContent = document.querySelector('#commentContent');
     var newComment = document.createElement('div');
-    // push these variables to the array
-    // ourUsers.push(name: userName.value)
-    newName.innerText = ourUsers.i
     newName.innerText = userName.value
     // newName.classList.add('name__new')
     nameContent.appendChild(newName)
     userName.value = ''
     newComment.innerText = userComment.value
     // newComment.classList.add('comments__new')
-    // ^ this will add stylings
     commentContent.appendChild(newComment)
     userComment.value = ''
 }
+
+// button.onclick = () => {
+//     var userComment = document.querySelector('#userComment');
+//     var commentContent = document.querySelector('#commentContent');
+//     var newComment = document.createElement('div');
+//     newComment.innerText = userComment.value
+//     // newComment.classList.add('comments__new')
+//     commentContent.appendChild(newComment)
+//     userComment.value = ''
+// }
 
 

@@ -19,6 +19,7 @@ body {
     &--title {
         font-size: 1.2rem;
         font-weight: 600;
+        padding-top: 8vh;
         color: $white;
         display: flex;
     }
@@ -30,28 +31,22 @@ body {
         padding: 3vh 0vw;
     }
 }
-
 .sound__byte {
     width: 100%;
     height: auto;
-    padding-top: 10vh;
+    padding-top: 5vh;
     border: none;
-    // border-radius: 10px;
-    // display: flex;
-    // overflow: hidden;
-    // padding-left: 12vw;
-    // align-items: center; 
-    // justify-content: center;
 }
 
-// change the display of the table cells so that they take up the
-// entire row?
+// SHOWS -- WITH FLEXBOX
 .shows {
     padding: 2vw;
-    padding-bottom: 6vh;
+    padding-bottom: 3vh;
+    display: flex;
     &__table {
         width: 100%;
-        // display: flex;
+        display: flex;
+        flex-direction: column;
     }
     &__title {
         color: $header-color;
@@ -60,49 +55,166 @@ body {
         padding: 6vw 0vw;
         text-align: left;
     }
-    // can't get this to sit at the bottom of the section????
-    // &__section {
-    //     // display: flex;
-    //     padding-bottom: 10vh;
-    //     margin-bottom: 100px;
-    //     border-bottom: solid $silver 1px;
-    // }
+    &__descriptors--tablet {
+        display: none;
+    }
+    &__section {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 3vh;
+        margin-bottom: 5vh;
+        border-bottom: solid $mercury 1px;
+    }
     &__descriptor {
         color: $silver;
         font-weight: 550;
         padding: 1vw 0;
-        display: block;
+        // display: block;
         // this is a very hacky way to get the border -- 
         // also, there is no border on the last item.
-        &--first {
-            border-top: solid $silver 1px;
-            padding-top: 20px;
-            margin-top: 15px;
-        }
+        // &--first {
+            //     border-top: solid $silver 1px;
+            //     padding-top: 20px;
+            //     margin-top: 15px;
+            // }
     }
     &__date {
         color: $header-color;
         font-family: semi-bold-font;
         padding: 1vw 0 4vw 0;
-        display: block;
     }
     &__details {
         color: $header-color;
         font-weight: 400;
         padding: 1vw 0 4vw 0;
-        display: block;
     }
-    // can't get the tickets button to actually be a button??
-    // just won't show up at all
     &__tickets {
         width: 100%;
         text-align: center;
         color: $white;
         background-color: $header-color;
         font-weight: 600;
-        padding: 3vh 0;
+        padding: 1.5vh 0;
+        border: none;
         border-radius: 5px;
-        display: block;
-
     }
 }
+
+@media (min-width: 650px) {
+    .about__img--title {
+        font-family: bold-font;
+        font-size: 1.7rem; 
+        padding-bottom: 3vh;
+    }
+    .about__img--caption {
+        padding-right: 12vw;
+    }
+    .sound__byte {
+        // padding-right: 16vw;
+        width: 65%;
+    }
+    tbody {
+        width: 100%;
+    }
+    .shows {
+        // width: 100%;
+        &__table {
+            width: 100%;
+            flex-direction: row;
+            // align-items: center;
+        }
+        &__section {
+            // width: 100%;
+            // padding: 0;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &__descriptors--tablet {
+            display: flex;
+        }
+        &__descriptor {
+            display: none;
+        }
+        &__details {
+            padding: 0;
+            width: 25%;
+        }
+        &__date {
+            padding: 0;
+            width: 25%;
+        }
+        &__tickets {
+            width: 25%;
+            // padding: 1.5vh 3vw;
+        }
+    }
+}
+// NEED TO CHANGE THE WIDTH OF BUTTON TEXT ITSELF so it's not 25%
+
+
+
+
+// W/O FLEXBOX
+// .shows {
+//     padding: 2vw;
+//     padding-bottom: 3vh;
+//     // display: flex;
+//     &__table {
+//         width: 100%;
+//         // display: flex;
+//     }
+//     &__title {
+//         color: $header-color;
+//         font-family: bold-font;
+//         font-size: 2rem;
+//         padding: 6vw 0vw;
+//         text-align: left;
+//     }
+//     // can't get this to sit at the bottom of the section????
+//     &__section {
+//         display: block;
+//         padding-bottom: 3vh;
+//         margin-bottom: 5vh;
+//         border-bottom: solid $mercury 1px;
+//     }
+//     &__descriptor {
+//         color: $silver;
+//         font-weight: 550;
+//         padding: 1vw 0;
+//         display: block;
+//         // this is a very hacky way to get the border -- 
+//         // also, there is no border on the last item.
+//         // &--first {
+//         //     border-top: solid $silver 1px;
+//         //     padding-top: 20px;
+//         //     margin-top: 15px;
+//         // }
+//     }
+//     &__date {
+//         color: $header-color;
+//         font-family: semi-bold-font;
+//         padding: 1vw 0 4vw 0;
+//         display: block;
+//     }
+//     &__details {
+//         color: $header-color;
+//         font-weight: 400;
+//         padding: 1vw 0 4vw 0;
+//         display: block;
+//     }
+//     // can't get the tickets button to actually be a button??
+//     // just won't show up at all
+//     &__tickets {
+//         width: 100%;
+//         text-align: center;
+//         color: $white;
+//         background-color: $header-color;
+//         font-weight: 600;
+//         padding: 1.5vh 0;
+//         border: none;
+//         border-radius: 5px;
+//         display: block;
+//     }
+// }
+
