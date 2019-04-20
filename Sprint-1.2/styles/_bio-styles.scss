@@ -108,7 +108,7 @@ body {
     color: $header-color;
     padding-left: 3vw;
     font-family: bold-font;
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 .band__photo {
@@ -172,6 +172,19 @@ body {
     }
 }
 
+// COMMENTS STYLES
+.comments {
+    &__header {
+        @extend .bio__header;
+    }
+}
+
+// #comments__form {
+
+// }
+
+
+// FOOTER STYLES
 .home__footer {
     background-color: $header-color;
     padding: 7vh 3vw;

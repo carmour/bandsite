@@ -51,6 +51,7 @@ body {
     padding-bottom: 6vh;
     &__table {
         width: 100%;
+        // display: flex;
     }
     &__title {
         color: $header-color;
@@ -59,14 +60,13 @@ body {
         padding: 6vw 0vw;
         text-align: left;
     }
-
-
     // can't get this to sit at the bottom of the section????
-    &__section {
-        padding-bottom: 10vh;
-        margin-bottom: 100px;
-        border-bottom: solid $silver 1px;
-    }
+    // &__section {
+    //     // display: flex;
+    //     padding-bottom: 10vh;
+    //     margin-bottom: 100px;
+    //     border-bottom: solid $silver 1px;
+    // }
     &__descriptor {
         color: $silver;
         font-weight: 550;

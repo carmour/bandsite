@@ -7,7 +7,6 @@
         <title>Bandsite</title>
         <link rel="stylesheet" href="styles/band-styles.css">
     </head>
-
     <body>
         <header class="page__header">
             <h1 class="header__title">
@@ -15,16 +14,14 @@
             </h1>
             <nav class="header__nav">
                 <div class="header__nav--item" id="header__nav--current">Biography</div>
-                <div class="header__nav--item"><a href="shows.html">Shows</a></div>
+                <div class="header__nav--item"><a href="../Sprint-1.2/pages/shows.html">Shows</a></div>
             </nav>
         </header>
-
         <section>
             <div class="hero__img hero__img--caption">
                 Gaspard Auge & Xavier de Rosnay
             </div>
         </section>
-       
         <section>
             <h1 class="bio__header">About The Musicians</h1>
             <img class='band__photo' src='bandsite-photos/band-img.jpg' alt="The band on stage">
@@ -54,7 +51,7 @@
                     later, they were in his office, signing a record deal.
                 </div>
                 <div class="bio__paragraphs--para">
-                    Xavier De Ronsay and Gaspard Augé had a few
+                    Xavier De Rxonsay and Gaspard Augé had a few
                     mutual friends, who happened to run a record label,
                     seeking tracks for a compilation. With an immediate
                     connection, the pair decided to try their hand at
@@ -68,7 +65,6 @@
                 </div>
             </div>
         </section>
-
         <section class="photo__gallery">
             <h1 class="photo__gallery--title">Photo Gallery</h1>
             <div class="photo__gallery--photos">
@@ -83,6 +79,18 @@
                 <img class="photo__gallery--photo" src="bandsite-photos/Photo-gallery-9.jpg" alt="Confetti in the crowd">
             </div>                      
         </section>
+        <!-- Comments section -->
+        <section>
+            <h1 class="comments__header">Join the Conversation</h1>
+            <form id="comments__form">
+                <label>NAME</label><input id ="userName" type="text" name="name"/>
+                <label>COMMENT</label><textarea id="userComment" name="comment_section" rows="8" placeholder="Add a new comment"></textarea>
+                <button id="comments__button" type="submit">COMMENT</button>
+                <div id="nameContent"></div>
+                <div id="commentContent"></div>
+            </form>
+        </section>
+
         <footer class="home__footer">
             <section class="home__footer--tablet">
                 <h1 class="home__footer--header">Get In Touch</h1>
@@ -142,7 +150,6 @@
                 All Rights Reserved
             </div>
         </footer>
-
+    <script src="../Sprint-1.2/javascript/1.2-java.js"></script>
     </body>
-    
 </html>

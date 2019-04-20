@@ -121,11 +121,11 @@ body {
   font-family: semi-bold-font;
 }
 
-.bio__header, .photo__gallery--title, .home__footer--header {
+.bio__header, .photo__gallery--title, .comments__header, .home__footer--header {
   color: #323232;
   padding-left: 3vw;
   font-family: bold-font;
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 .band__photo, .photo__gallery--photo {
@@ -360,12 +360,6 @@ body {
   text-align: left;
 }
 
-.shows__section {
-  padding-bottom: 10vh;
-  margin-bottom: 100px;
-  border-bottom: solid #AFAFAF 1px;
-}
-
 .shows__descriptor {
   color: #AFAFAF;
   font-weight: 550;
@@ -546,7 +540,7 @@ body {
     font-size: 2.5rem;
     font-family: bold-font;
   }
-  .bio__header, .photo__gallery--title, .home__footer--header {
+  .bio__header, .photo__gallery--title, .comments__header, .home__footer--header {
     font-size: 1.8rem;
     padding-left: 10vw;
   }
