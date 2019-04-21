@@ -1,0 +1,53 @@
+@media (min-width: 1024px) {
+    .about__img {
+        padding: 0vh 12vw 10vh 12vw;
+        min-height: 80vh;
+        &--title {
+            font-size: 1.5rem;
+            padding: 0;
+        }
+        &--desktop {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            // justify-content: space-between;
+            padding: 0;
+        }
+        &--caption {
+            padding: 2vh 3vw 0 0;
+            font-size: 2.7rem;
+            // vertical-align: sub;
+            // line-height: 3.5rem;
+        }
+    }
+    .sound__byte {
+        width: 100%;
+        height: 60%;
+        padding-bottom: 2vh;
+        // height: auto;
+    }
+    // tbody {
+    //     display: flex;
+    //     flex-direction: column;
+    // }
+    // .shows {
+    //     &__table {
+    //         display: flex;
+    //         flex-direction: column;
+    //     }
+    //     &__desktop--columns {
+    //         display: flex;
+    //         flex-direction: column;
+    //     }
+    //     &__table {
+    //         display: flex;
+    //         flex-direction: row;
+    //     }
+    //     &__section {
+    //         flex-direction: row;
+    //     }
+    //     & * {
+    //         display: flex;
+    //     }
+    // }
+}

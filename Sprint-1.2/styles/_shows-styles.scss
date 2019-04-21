@@ -29,6 +29,7 @@ body {
         font-size: 2.5rem;
         line-height: 3.5rem;
         padding: 3vh 0vw;
+        // width: 100%;
     }
 }
 .sound__byte {
@@ -99,91 +100,107 @@ body {
         border-radius: 5px;
     }
     &__button {
-        @extend .shows__tickets;        
+        @extend .shows__tickets;  
     }
 }
 
-@media (min-width: 650px) {
-    .about__img--title {
-        font-family: bold-font;
-        font-size: 1.7rem; 
-        padding-bottom: 3vh;
-    }
-    .about__img--caption {
-        padding-right: 12vw;
-    }
-    .sound__byte {
-        // padding-right: 16vw;
-        width: 65%;
-    }
-    tbody {
-        width: 100%;
-    }
-    .shows {
-        // width: 100%;
-        &__table {
-            width: 100%;
-            flex-direction: row;
-            // align-items: center;
-        }
-        &__title {
-            padding: 4vh 0;
-        }
-        &__section {
-            // width: 100%;
-            // padding: 0;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-        }
-        &__details {
-            font-size: 1.1rem;
-        }
-        &__descriptors--tablet {
-            color: $silver;
-            // font-weight: 550;
-            display: flex;
-            font-size: 0.9rem;
-            font-weight: 700; 
-            padding-bottom: 4vh;
-            // justify-content: flex-start;
-            // padding-right: 38%;
-            // width: 25%;
-            & * {
-                // width: 25%;
-                padding: 0;
-            }
-        }
-        &__descriptor {
-            display: none;
-        }
-        &__tablet--date {
-            width: 28%;
-        }
-        &__tablet--details {
-            width: 22%;
-        }
-        &__date {
-            font-size: 1.1rem;
-            width: 28%;
-            padding: 0;
-        }
-        &__details {
-            padding: 0;
-            width: 22%;
-        }
-        &__tickets {
-            width: 28%;
-            // padding: 1.5vh 3vw;
-        }
-        &__button {
-            width: 100%;
-            font-size: 1.1rem;
-            font-family: semi-bold-font;
-        }
-    }
-}
-// NEED TO CHANGE THE WIDTH OF BUTTON TEXT ITSELF so it's not 25%
+// @media (min-width: 650px) {
+//     .about__img--title {
+//         font-family: bold-font;
+//         font-size: 1.7rem; 
+//         padding-bottom: 3vh;
+//     }
+//     .about__img--caption {
+//         padding-right: 12vw;
+//     }
+//     .sound__byte {
+//         // padding-right: 16vw;
+//         width: 65%;
+//     }
+//     tbody {
+//         width: 100%;
+//     }
+//     .shows {
+//         // width: 100%;
+//         &__table {
+//             width: 100%;
+//             flex-direction: row;
+//             // align-items: center;
+//         }
+//         &__title {
+//             padding: 4vh 0;
+//         }
+//         &__section {
+//             // width: 100%;
+//             // padding: 0;
+//             flex-direction: row;
+//             justify-content: space-between;
+//             align-items: center;
+//         }
+//         &__details {
+//             font-size: 1.1rem;
+//         }
+//         &__descriptors--tablet {
+//             color: $silver;
+//             // font-weight: 550;
+//             display: flex;
+//             font-size: 0.9rem;
+//             font-weight: 700; 
+//             padding-bottom: 4vh;
+//             // justify-content: flex-start;
+//             // padding-right: 38%;
+//             // width: 25%;
+//             & * {
+//                 // width: 25%;
+//                 padding: 0;
+//             }
+//         }
+//         &__descriptor {
+//             display: none;
+//         }
+//         &__tablet--date {
+//             width: 28%;
+//         }
+//         &__tablet--details {
+//             width: 22%;
+//         }
+//         &__date {
+//             font-size: 1.1rem;
+//             width: 28%;
+//             padding: 0;
+//         }
+//         &__details {
+//             padding: 0;
+//             width: 22%;
+//         }
+//         &__tickets {
+//             width: 28%;
+//             // padding: 1.5vh 3vw;
+//         }
+//         &__button {
+//             width: 100%;
+//             font-size: 1.1rem;
+//             font-family: semi-bold-font;
+//         }
+//     }
+// }
+
+// @media (min-width: 1024px) {
+//     .about__img {
+//         &--title {
+//             padding-left: 10vw;
+//         }
+//         &--desktop {
+//             display: flex;
+//             flex-direction: row;
+//             // justify-content: space-around;
+//             padding: 0;
+//         }
+//         &--caption {
+//             padding: 0;
+//         }
+//     }
+// }
 
 
 

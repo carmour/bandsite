@@ -418,86 +418,6 @@ body {
 }
 
 @media (min-width: 650px) {
-  .about__img--title {
-    font-family: bold-font;
-    font-size: 1.7rem;
-    padding-bottom: 3vh;
-  }
-  .about__img--caption {
-    padding-right: 12vw;
-  }
-  .sound__byte {
-    width: 65%;
-  }
-  tbody {
-    width: 100%;
-  }
-  .shows__table {
-    width: 100%;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-  .shows__title {
-    padding: 4vh 0;
-  }
-  .shows__section {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .shows__details {
-    font-size: 1.1rem;
-  }
-  .shows__descriptors--tablet {
-    color: #AFAFAF;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    font-size: 0.9rem;
-    font-weight: 700;
-    padding-bottom: 4vh;
-  }
-  .shows__descriptors--tablet * {
-    padding: 0;
-  }
-  .shows__descriptor {
-    display: none;
-  }
-  .shows__tablet--date {
-    width: 28%;
-  }
-  .shows__tablet--details {
-    width: 22%;
-  }
-  .shows__date {
-    font-size: 1.1rem;
-    width: 28%;
-    padding: 0;
-  }
-  .shows__details {
-    padding: 0;
-    width: 22%;
-  }
-  .shows__tickets, .shows__button {
-    width: 28%;
-  }
-  .shows__button {
-    width: 100%;
-    font-size: 1.1rem;
-    font-family: semi-bold-font;
-  }
-}
-
-@media (min-width: 650px) {
   .page__header {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -721,8 +641,111 @@ body {
   }
 }
 
-.resizing {
-  width: 80%;
-  height: auto;
+@media (min-width: 650px) {
+  .about__img--title {
+    font-family: bold-font;
+    font-size: 1.7rem;
+    padding-bottom: 3vh;
+  }
+  .about__img--caption {
+    padding-right: 12vw;
+  }
+  .sound__byte {
+    width: 65%;
+  }
+  tbody {
+    width: 100%;
+  }
+  .shows__table {
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .shows__title {
+    padding: 4vh 0;
+  }
+  .shows__section {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .shows__descriptors--tablet {
+    color: #AFAFAF;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 0.9rem;
+    font-weight: 700;
+    padding-bottom: 4vh;
+  }
+  .shows__descriptors--tablet * {
+    padding: 0;
+  }
+  .shows__descriptor {
+    display: none;
+  }
+  .shows__tablet--date {
+    width: 28%;
+  }
+  .shows__tablet--details {
+    width: 22%;
+  }
+  .shows__date {
+    width: 28%;
+    padding: 0;
+  }
+  .shows__details {
+    padding: 0;
+    width: 22%;
+  }
+  .shows__tickets, .shows__button {
+    width: 28%;
+  }
+  .shows__button {
+    width: 100%;
+    font-family: semi-bold-font;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about__img {
+    padding: 0vh 12vw 10vh 12vw;
+    min-height: 80vh;
+  }
+  .about__img--title {
+    font-size: 1.5rem;
+    padding: 0;
+  }
+  .about__img--desktop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    padding: 0;
+  }
+  .about__img--caption {
+    padding: 2vh 3vw 0 0;
+    font-size: 2.7rem;
+  }
+  .sound__byte {
+    width: 100%;
+    height: 60%;
+    padding-bottom: 2vh;
+  }
 }
 /*# sourceMappingURL=band-styles.css.map */
