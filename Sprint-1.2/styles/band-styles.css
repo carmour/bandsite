@@ -406,7 +406,7 @@ body {
   padding: 1vw 0 4vw 0;
 }
 
-.shows__tickets {
+.shows__tickets, .shows__button {
   width: 100%;
   text-align: center;
   color: #FFFFFF;
@@ -439,6 +439,9 @@ body {
         -ms-flex-direction: row;
             flex-direction: row;
   }
+  .shows__title {
+    padding: 4vh 0;
+  }
   .shows__section {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -451,24 +454,46 @@ body {
         -ms-flex-align: center;
             align-items: center;
   }
+  .shows__details {
+    font-size: 1.1rem;
+  }
   .shows__descriptors--tablet {
+    color: #AFAFAF;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    font-size: 0.9rem;
+    font-weight: 700;
+    padding-bottom: 4vh;
+  }
+  .shows__descriptors--tablet * {
+    padding: 0;
   }
   .shows__descriptor {
     display: none;
   }
-  .shows__details {
-    padding: 0;
-    width: 25%;
+  .shows__tablet--date {
+    width: 28%;
+  }
+  .shows__tablet--details {
+    width: 22%;
   }
   .shows__date {
+    font-size: 1.1rem;
+    width: 28%;
     padding: 0;
-    width: 25%;
   }
-  .shows__tickets {
-    width: 25%;
+  .shows__details {
+    padding: 0;
+    width: 22%;
+  }
+  .shows__tickets, .shows__button {
+    width: 28%;
+  }
+  .shows__button {
+    width: 100%;
+    font-size: 1.1rem;
+    font-family: semi-bold-font;
   }
 }
 
