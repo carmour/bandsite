@@ -189,11 +189,6 @@ body {
         border-radius: 100%;
         display: flex;
         margin: 4vh 3vw 0 0;
-        // padding: 5vh 3vw 0 0;
-        // float: left;
-        // overflow: hidden;
-        // size: cover;
-        // position: center;
     }
     &__form {
         &--input {
@@ -208,7 +203,6 @@ body {
             font-weight: 800;
             font-size: 0.9rem;
             padding: 1vh 0;
-            // padding: 1vw 0;
         }
         &--username {
             display: flex;
@@ -223,9 +217,6 @@ body {
             border: $header-color 2px solid;
             border-radius: 5px;
             background-color: $alabaster;
-            // font-weight: 800;
-            // font-size: 0.9rem;
-            // padding: 0 1vw;
         }
         &--comment {
             display: flex;
@@ -234,13 +225,12 @@ body {
             font-weight: 800;
             font-size: 0.9rem;
             padding: 4vh 0 1vh 0;
-            // width: 92%;
         }
         &--text {
             width: 100%;
             box-sizing: border-box;
             font-family: standard-font;
-            padding: 2vh 0 0 2vw;
+            padding: 2vh 2vw;
             height: 12vh;
             border: $mercury 1px solid;
             border-radius: 5px;
@@ -260,35 +250,62 @@ body {
         }
     }
 }
-// #comments__form {
-//     display: flex;
-//     flex-direction: column;
-//     width: 100%;
-// }
-// #userComment {
-//     width: 93%;
-// // }
-// #comments__button {
-//     width: 95%;
-// }
-
-
-
 // new comment styles
+#commentContent {
+    padding-bottom: 3vh;
+}
+.commentDiv {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 3vh;
+    border-bottom: solid $mercury 1px;
+    margin: 4vh 2vw;
+}
 .photoDiv {
-    float: left;
-    height: 60px;
-    width: 60px;
+    // height: 60px;
+    // width: 60px;
+    // border-radius: 100%;
+    // margin: 4vh 3vw 0 0;
+    display: flex;
+
 }
 .profilePhoto {
     height: 60px;
-    border-radius: 200px;
-    width: 100%;
+    width: 60px;
+    border-radius: 100%;
+    display: flex;
+    margin: 0 3vw 0 0;
 }
-.commentDiv {
-    height: 300px;
+.inputDiv {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    box-sizing: border-box;
+    // margin
 }
-
+.nameDateDiv {
+    display: flex;
+    justify-content: space-between;
+    padding: 1vh 0;
+}
+.nameDiv {
+    display: flex;
+    font-family: semi-bold-font;
+    color: $header-color;
+}
+.dateDiv {
+    display: flex;
+    color: $silver;
+}
+.textDiv {
+    color: $header-color;
+    font-weight: 300;
+    line-height: 1.3rem;
+    padding-top: 1vh;
+    max-width: 100%;
+    box-sizing: border-box;
+    word-wrap: break-word;
+}
 
 // FOOTER STYLES
 .home__footer {
@@ -333,6 +350,3 @@ body {
     padding-top: 4vh;
     margin-right: 15vw;
 }
-
-// @import 'tablet-bio';
-// @import 'desktop-bio';

@@ -308,7 +308,7 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: standard-font;
-  padding: 2vh 0 0 2vw;
+  padding: 2vh 2vw;
   height: 12vh;
   border: #E1E1E1 1px solid;
   border-radius: 5px;
@@ -328,20 +328,86 @@ body {
   border-radius: 5px;
 }
 
+#commentContent {
+  padding-bottom: 3vh;
+}
+
+.commentDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding-bottom: 3vh;
+  border-bottom: solid #E1E1E1 1px;
+  margin: 4vh 2vw;
+}
+
 .photoDiv {
-  float: left;
-  height: 60px;
-  width: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .profilePhoto {
   height: 60px;
-  border-radius: 200px;
-  width: 100%;
+  width: 60px;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 3vw 0 0;
 }
 
-.commentDiv {
-  height: 300px;
+.inputDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.nameDateDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1vh 0;
+}
+
+.nameDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: semi-bold-font;
+  color: #323232;
+}
+
+.dateDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #AFAFAF;
+}
+
+.textDiv {
+  color: #323232;
+  font-weight: 300;
+  line-height: 1.3rem;
+  padding-top: 1vh;
+  max-width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  word-wrap: break-word;
 }
 
 .home__footer {
@@ -630,6 +696,21 @@ body {
     width: 35%;
     margin-left: 65%;
   }
+  .commentContent {
+    padding-bottom: 1vh;
+  }
+  .commentDiv {
+    margin: 3vh 14vw;
+  }
+  .nameDateDiv {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .dateDiv {
+    padding-left: 1vw;
+    font-weight: 100;
+  }
   .home__footer {
     padding-top: 5vh;
     padding-bottom: 3vh;
@@ -759,6 +840,24 @@ body {
   .comments__form--text {
     font-size: 0.8rem;
     padding-left: 1vw;
+  }
+  .textDiv {
+    padding-top: 0;
+  }
+  .commentContent {
+    padding-bottom: 1vh;
+  }
+  .commentDiv {
+    margin: 3vh 28vw;
+  }
+  .nameDateDiv {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .dateDiv {
+    padding-left: 1vw;
+    font-weight: 100;
   }
   .home__footer {
     padding: 3vh 12vw 5vh 12vw;

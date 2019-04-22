@@ -73,7 +73,21 @@
             margin-left: 65%;
         }
     }
-
+    // input comment styles
+    .commentContent {
+        padding-bottom: 1vh;
+    }
+    .commentDiv {
+        margin: 3vh 14vw;
+        // padding-bottom: 4vh;
+    }
+    .nameDateDiv {
+        justify-content: flex-start;
+    }
+    .dateDiv {
+        padding-left: 1vw;
+        font-weight: 100;
+    }
 
     .home__footer {
         padding-top: 5vh;
