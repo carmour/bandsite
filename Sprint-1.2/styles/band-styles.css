@@ -747,5 +747,23 @@ body {
     height: 60%;
     padding-bottom: 2vh;
   }
+  .shows {
+    display: initial;
+  }
+  .shows__table {
+    display: initial;
+  }
+  .shows__title {
+    display: initial;
+    float: left;
+  }
+  .shows__title--desktop {
+    display: initial;
+    float: left;
+  }
+  .shows__desktop--columns {
+    display: initial;
+    float: right;
+  }
 }
 /*# sourceMappingURL=band-styles.css.map */

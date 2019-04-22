@@ -26,6 +26,24 @@
         padding-bottom: 2vh;
         // height: auto;
     }
+    .shows {
+        display: initial;
+        &__table {
+            display: initial;
+        }
+        &__title {
+            display: initial;
+            float: left;
+        }
+        &__title--desktop {
+            display: initial;
+            float: left;
+        }
+        &__desktop--columns {
+            display: initial;
+            float: right;
+        }
+    }
     // tbody {
     //     display: flex;
     //     flex-direction: column;

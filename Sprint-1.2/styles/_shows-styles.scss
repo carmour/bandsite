@@ -55,6 +55,7 @@ body {
         font-size: 2rem;
         padding: 6vw 0vw;
         text-align: left;
+        // float: left;
     }
     &__descriptors--tablet {
         display: none;
@@ -100,8 +101,9 @@ body {
         border-radius: 5px;
     }
     &__button {
-        @extend .shows__tickets;  
+        @extend .shows__tickets;
     }
+
 }
 
 // @media (min-width: 650px) {
