@@ -1004,22 +1004,32 @@ body {
     padding-bottom: 2vh;
   }
   .shows {
-    display: initial;
-  }
-  .shows__table {
-    display: initial;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: columns;
+            flex-direction: columns;
+    padding: 2vw 12vw;
   }
   .shows__title {
-    display: initial;
-    float: left;
+    display: none;
   }
   .shows__title--desktop {
-    display: initial;
-    float: left;
+    color: #323232;
+    font-family: bold-font;
+    font-size: 2rem;
+    padding: 0vh 6vw 0 0;
   }
-  .shows__desktop--columns {
-    display: initial;
-    float: right;
+  .shows__descriptors--tablet * {
+    font-size: 0.7rem;
+  }
+  .shows__date {
+    font-size: 1rem;
+  }
+  .shows__details {
+    font-size: 0.9rem;
   }
 }
 /*# sourceMappingURL=band-styles.css.map */
