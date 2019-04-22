@@ -608,7 +608,7 @@ body {
   border-radius: 5px;
 }
 
-@media (min-width: 650px) {
+@media (min-width: 685px) {
   .page__header {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -901,7 +901,7 @@ body {
   }
 }
 
-@media (min-width: 650px) {
+@media (min-width: 685px) {
   .about__img--title {
     font-family: bold-font;
     font-size: 1.7rem;
