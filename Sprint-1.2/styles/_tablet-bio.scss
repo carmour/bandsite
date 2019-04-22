@@ -56,6 +56,25 @@
             }
         }
     }
+    // COMMENTS STYLES
+    .comments {
+        padding-bottom: 4vh;
+        margin: 0 14vw;
+        border-bottom: solid $mercury 2px;
+        &__header {
+            font-size: 2.5rem;
+        }
+        &__form--text {
+            font-size: 1rem;
+            color: $header-color;
+        }
+        &__form--submit {
+            width: 35%;
+            margin-left: 65%;
+        }
+    }
+
+
     .home__footer {
         padding-top: 5vh;
         padding-bottom: 3vh;

@@ -56,6 +56,30 @@
     .photo__gallery--photo {
         padding: 1vh;
     }
+    // COMMENTS STYLINGS
+    .comments {
+        margin: 0 28vw;
+        &__header {
+            padding-left: 12vw;
+        }
+        &__form {
+            &--name {
+                font-size: 0.7rem;
+            }
+            &--comment {
+                font-size: 0.7rem;
+            }
+            &--username {
+                font-size: 0.8rem;
+                padding-left: 1vw;
+            }
+            &--text {
+                font-size: 0.8rem;
+                padding-left: 1vw;
+            }
+        }
+    }
+
     .home__footer {
         padding: 3vh 12vw 5vh 12vw;
         &--header {
