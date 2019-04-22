@@ -30,6 +30,7 @@
 // DOCUMENT STYLES
 body {
     font-family: standard-font;
+    // margin: 0;
 }
 
 // HEADER STYLES
@@ -172,21 +173,115 @@ body {
     }
 }
 
-// COMMENTS STYLES
+// form styles
 .comments {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 7vh;
+    border-bottom: solid $mercury 1px;
+    margin: 0 3vw;
     &__header {
         @extend .bio__header;
     }
+    &__photo {
+        height: 60px;
+        width: 60px;
+        border-radius: 100%;
+        display: flex;
+        margin: 4vh 3vw 0 0;
+        // padding: 5vh 3vw 0 0;
+        // float: left;
+        // overflow: hidden;
+        // size: cover;
+        // position: center;
+    }
+    &__form {
+        &--input {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+        &--name {
+            display: flex;
+            width: 100%;
+            color: $silver;
+            font-weight: 800;
+            font-size: 0.9rem;
+            padding: 1vh 0;
+            // padding: 1vw 0;
+        }
+        &--username {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            box-sizing: border-box;
+            height: 8vh;
+            font-family: standard-font;
+            font-size: 1.1rem;
+            color: $header-color;
+            padding-left: 2vw;
+            border: $header-color 2px solid;
+            border-radius: 5px;
+            background-color: $alabaster;
+            // font-weight: 800;
+            // font-size: 0.9rem;
+            // padding: 0 1vw;
+        }
+        &--comment {
+            display: flex;
+            flex-direction: column;
+            color: $silver;
+            font-weight: 800;
+            font-size: 0.9rem;
+            padding: 4vh 0 1vh 0;
+            // width: 92%;
+        }
+        &--text {
+            width: 100%;
+            box-sizing: border-box;
+            font-family: standard-font;
+            padding: 2vh 0 0 2vw;
+            height: 12vh;
+            border: $mercury 1px solid;
+            border-radius: 5px;
+            background-color: $alabaster;
+            margin-bottom: 3vh;
+        }
+        &--submit {
+            width: 100%;
+            height: 7vh;
+            text-align: center;
+            color: $white;
+            background-color: $header-color;
+            font-weight: 700;
+            padding: 1.5vh 0;
+            border: none;
+            border-radius: 5px;
+        }
+    }
 }
+// #comments__form {
+//     display: flex;
+//     flex-direction: column;
+//     width: 100%;
+// }
+// #userComment {
+//     width: 93%;
+// // }
+// #comments__button {
+//     width: 95%;
+// }
 
-// comment styles
+
+
+// new comment styles
 .photoDiv {
     float: left;
-    height: 80px;
-    width: 80px;
+    height: 60px;
+    width: 60px;
 }
 .profilePhoto {
-    height: 80px;
+    height: 60px;
     border-radius: 200px;
     width: 100%;
 }

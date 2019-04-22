@@ -82,13 +82,18 @@
         <!-- Comments section -->
         <section>
             <h1 class="comments__header">Join the Conversation</h1>
-            <form id="comments__form">
-                <label>NAME</label><input id ="userName" type="text" name="name" value="Mohan Muruge" readonly/>
-                <label>COMMENT</label><textarea id="userComment" name="comment_section" rows="8" placeholder="Add a new comment"></textarea>
-                <button id="comments__button" type="submit">COMMENT</button>
-                <!-- <div id="ourName"></div>
-                <div id="ourComment"></div> -->
-            </form>
+            <div class="comments">
+                <img class="comments__photo" src="bandsite-photos/Mohan-muruge.jpg">
+                <form id="comments__form" class="comments__form--input">
+                    <label class="comments__form--name">NAME</label>
+                    <input id="userName" class="comments__form--username" type="text" name="name" value="Mohan Muruge" readonly/>
+                    <label class="comments__form--comment">COMMENT</label>
+                    <textarea id="userComment" class="comments__form--text" name="comment_section" placeholder="Add a new comment"></textarea>
+                    <button id="comments__button" class="comments__form--submit" type="submit">COMMENT</button>
+                    <!-- <div id="ourName"></div>
+                    <div id="ourComment"></div> -->
+                </form>
+            </div>
             <div id="commentContent"></div>
 
         </section>
