@@ -179,9 +179,20 @@ body {
     }
 }
 
-// #comments__form {
-
-// }
+// comment styles
+.photoDiv {
+    float: left;
+    height: 80px;
+    width: 80px;
+}
+.profilePhoto {
+    height: 80px;
+    border-radius: 200px;
+    width: 100%;
+}
+.commentDiv {
+    height: 300px;
+}
 
 
 // FOOTER STYLES

@@ -223,6 +223,22 @@ body {
   z-index: 1;
 }
 
+.photoDiv {
+  float: left;
+  height: 80px;
+  width: 80px;
+}
+
+.profilePhoto {
+  height: 80px;
+  border-radius: 200px;
+  width: 100%;
+}
+
+.commentDiv {
+  height: 300px;
+}
+
 .home__footer {
   background-color: #323232;
   padding: 7vh 3vw;
