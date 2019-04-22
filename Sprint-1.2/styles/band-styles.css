@@ -558,6 +558,10 @@ body {
   text-align: left;
 }
 
+.shows__title--desktop {
+  display: none;
+}
+
 .shows__descriptors--tablet {
   display: none;
 }
@@ -1017,6 +1021,9 @@ body {
     display: none;
   }
   .shows__title--desktop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     color: #323232;
     font-family: bold-font;
     font-size: 2rem;

@@ -53,6 +53,9 @@ body {
         font-size: 2rem;
         padding: 6vw 0vw;
         text-align: left;
+        &--desktop {
+            display: none;
+        }
     }
     &__descriptors--tablet {
         display: none;

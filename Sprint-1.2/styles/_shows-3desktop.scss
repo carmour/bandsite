@@ -29,6 +29,7 @@
         &__title {
             display: none;
             &--desktop {
+                display: flex;
                 color: $header-color;
                 font-family: bold-font;
                 font-size: 2rem;
