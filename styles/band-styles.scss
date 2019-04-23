@@ -1,13 +1,10 @@
-// @import 'colors';
 
-@import 'bio-styles';
-@import 'shows-styles';
+@import 'bio-1mobile';
+@import 'shows-1mobile';
 
-@import 'tablet-bio';
-@import 'desktop-bio';
+@import 'bio-2tablet';
+@import 'bio-3desktop';
 
-.resizing {
-    width: 80%;
-    height: auto;
-    
-}
+@import 'shows-2tablet';
+@import 'shows-3desktop';
+

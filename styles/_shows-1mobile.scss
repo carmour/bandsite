@@ -15,10 +15,10 @@ body {
     justify-content: center;
     padding: 4vw;
     box-sizing: border-box;
-    // overflow: hidden;
     &--title {
         font-size: 1.2rem;
         font-weight: 600;
+        padding-top: 8vh;
         color: $white;
         display: flex;
     }
@@ -30,27 +30,22 @@ body {
         padding: 3vh 0vw;
     }
 }
-
 .sound__byte {
     width: 100%;
     height: auto;
-    padding-top: 10vh;
+    padding-top: 5vh;
     border: none;
-    // border-radius: 10px;
-    // display: flex;
-    // overflow: hidden;
-    // padding-left: 12vw;
-    // align-items: center; 
-    // justify-content: center;
 }
 
-// change the display of the table cells so that they take up the
-// entire row?
+// SHOWS -- WITH FLEXBOX
 .shows {
     padding: 2vw;
-    padding-bottom: 6vh;
+    padding-bottom: 3vh;
+    display: flex;
     &__table {
         width: 100%;
+        display: flex;
+        flex-direction: column;
     }
     &__title {
         color: $header-color;
@@ -58,52 +53,47 @@ body {
         font-size: 2rem;
         padding: 6vw 0vw;
         text-align: left;
+        &--desktop {
+            display: none;
+        }
     }
-
-
-    // can't get this to sit at the bottom of the section????
+    &__descriptors--tablet {
+        display: none;
+    }
     &__section {
-        padding-bottom: 10vh;
-        margin-bottom: 100px;
-        border-bottom: solid $silver 1px;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 3vh;
+        margin-bottom: 5vh;
+        border-bottom: solid $mercury 1px;
     }
     &__descriptor {
         color: $silver;
         font-weight: 550;
         padding: 1vw 0;
-        display: block;
-// asdf;l'kasdflkasdjfl;kasjdflkasjdl;f
-        // this is a very hacky way to get the border -- 
-        // also, there is no border on the last item.
-        &--first {
-            border-top: solid $silver 1px;
-            padding-top: 20px;
-            margin-top: 15px;
-        }
     }
     &__date {
         color: $header-color;
         font-family: semi-bold-font;
         padding: 1vw 0 4vw 0;
-        display: block;
     }
     &__details {
         color: $header-color;
         font-weight: 400;
         padding: 1vw 0 4vw 0;
-        display: block;
     }
-    // can't get the tickets button to actually be a button??
-    // just won't show up at all
     &__tickets {
         width: 100%;
         text-align: center;
         color: $white;
         background-color: $header-color;
         font-weight: 600;
-        padding: 3vh 0;
+        padding: 1.5vh 0;
+        border: none;
         border-radius: 5px;
-        display: block;
-
     }
+    &__button {
+        @extend .shows__tickets;
+    }
+
 }

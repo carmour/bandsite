@@ -30,6 +30,7 @@
 // DOCUMENT STYLES
 body {
     font-family: standard-font;
+    // margin: 0;
 }
 
 // HEADER STYLES
@@ -108,7 +109,7 @@ body {
     color: $header-color;
     padding-left: 3vw;
     font-family: bold-font;
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 .band__photo {
@@ -172,6 +173,141 @@ body {
     }
 }
 
+// form styles
+.comments {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 7vh;
+    border-bottom: solid $mercury 1px;
+    margin: 0 3vw;
+    &__header {
+        @extend .bio__header;
+    }
+    &__photo {
+        height: 60px;
+        width: 60px;
+        border-radius: 100%;
+        display: flex;
+        margin: 4vh 3vw 0 0;
+    }
+    &__form {
+        &--input {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+        &--name {
+            display: flex;
+            width: 100%;
+            color: $silver;
+            font-weight: 800;
+            font-size: 0.9rem;
+            padding: 1vh 0;
+        }
+        &--username {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            box-sizing: border-box;
+            height: 8vh;
+            font-family: standard-font;
+            font-size: 1.1rem;
+            color: $header-color;
+            padding-left: 2vw;
+            border: $header-color 2px solid;
+            border-radius: 5px;
+            background-color: $alabaster;
+        }
+        &--comment {
+            display: flex;
+            flex-direction: column;
+            color: $silver;
+            font-weight: 800;
+            font-size: 0.9rem;
+            padding: 4vh 0 1vh 0;
+        }
+        &--text {
+            width: 100%;
+            box-sizing: border-box;
+            font-family: standard-font;
+            padding: 2vh 2vw;
+            height: 12vh;
+            border: $mercury 1px solid;
+            border-radius: 5px;
+            background-color: $alabaster;
+            margin-bottom: 3vh;
+        }
+        &--submit {
+            width: 100%;
+            height: 7vh;
+            text-align: center;
+            color: $white;
+            background-color: $header-color;
+            font-weight: 700;
+            padding: 1.5vh 0;
+            border: none;
+            border-radius: 5px;
+        }
+    }
+}
+// new comment styles
+#commentContent {
+    padding-bottom: 3vh;
+}
+.commentDiv {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 3vh;
+    border-bottom: solid $mercury 1px;
+    margin: 4vh 2vw;
+}
+.photoDiv {
+    // height: 60px;
+    // width: 60px;
+    // border-radius: 100%;
+    // margin: 4vh 3vw 0 0;
+    display: flex;
+
+}
+.profilePhoto {
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    display: flex;
+    margin: 0 3vw 0 0;
+}
+.inputDiv {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    box-sizing: border-box;
+    // margin
+}
+.nameDateDiv {
+    display: flex;
+    justify-content: space-between;
+    padding: 1vh 0;
+}
+.nameDiv {
+    display: flex;
+    font-family: semi-bold-font;
+    color: $header-color;
+}
+.dateDiv {
+    display: flex;
+    color: $silver;
+}
+.textDiv {
+    color: $header-color;
+    font-weight: 300;
+    line-height: 1.3rem;
+    padding-top: 1vh;
+    max-width: 100%;
+    box-sizing: border-box;
+    word-wrap: break-word;
+}
+
+// FOOTER STYLES
 .home__footer {
     background-color: $header-color;
     padding: 7vh 3vw;
@@ -214,6 +350,3 @@ body {
     padding-top: 4vh;
     margin-right: 15vw;
 }
-
-// @import 'tablet-bio';
-// @import 'desktop-bio';
