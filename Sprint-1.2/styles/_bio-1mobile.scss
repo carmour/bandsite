@@ -1,0 +1,352 @@
+@import 'colors';
+@import 'fonts';
+
+@mixin header-font {
+    color: $header-color;
+    font-family: semi-bold-font;
+    font-size: 1.3rem;
+    @media (min-width: 768px) {
+        font-size: 1.9rem;
+        font-family: bold-font;
+    }
+}
+
+@mixin paragraph-font {
+    color: $header-color;
+    font-size: 1rem;
+    font-family: standard-font;
+}
+
+@mixin footer-spacing {
+    line-height: 1.4rem;
+    padding: 4% 0;
+}
+
+@mixin bio-positioning-desktop {
+    padding-left: 17vw;
+    padding-right: 17vw;
+}
+
+// DOCUMENT STYLES
+body {
+    font-family: standard-font;
+    // margin: 0;
+}
+
+// HEADER STYLES
+.page__header {
+    display: flex;
+    flex-direction: column;
+    background-color: $header-color;
+}
+
+.header__title {
+    text-align: center;
+    margin: 0;
+    padding: 2vh 4vw;
+    display: flex;
+    justify-content: center;
+    transition: transform .3s;
+    &:hover {
+        transform: scale(1.3);
+    }
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: $header-color;
+    color: $silver;
+    &--item {
+        display: flex;
+        justify-content: space-evenly;
+        width: 50%;
+        padding: 12px;
+        transition: transform .3s;
+    }
+    &--item * {
+        text-decoration: none;
+        color: $silver;
+    }
+    // NEED TO FIX THIS SO THAT IT IS PASSIVELY SILVER
+    // but also white on hover
+    &--item:hover {
+        color: $white;
+        transform: scale(1.9);
+    }
+}
+
+#header__nav--current {
+    color: $white;
+    border-bottom: 3px solid $white;
+    &:hover {
+        transform: none;
+    }
+}
+
+.hero__img {
+    background-image: url('../bandsite-photos/sean-mungur-441728-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 225px;
+    height: 40vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    &--caption {
+        color: white;
+        display: flex;
+        align-items: center;
+        font-size: 2rem;
+        padding-left: 3vw;
+        padding-right: 25%;
+        box-sizing: border-box;
+        font-family: semi-bold-font;
+    }
+}
+
+// BIO STYLES
+.bio__header {
+    color: $header-color;
+    padding-left: 3vw;
+    font-family: bold-font;
+    font-size: 1.8rem;
+}
+
+.band__photo {
+    width: 100%;
+    height: auto;
+    padding: 0 3vw;
+    box-sizing: border-box;
+}
+
+.band__quote {
+    @include header-font();
+    padding: 2vh;
+    &--name {
+        @include header-font();
+        padding: 4%;
+        font-size: 1rem;
+    }
+}
+
+.bio__title {
+    @extend .band__quote;
+    padding: 4vh 2vh;
+}
+
+.bio__paragraphs {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 3vh;
+}
+
+.bio__paragraphs--para {
+    @include paragraph-font();
+    padding: 0 2vh 3vh 2vh;
+    line-height: 1.6rem;
+}
+
+// PHOTO GALLERY STYLES
+.photo__gallery {
+    background-color: $alabaster;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 7vh;
+    box-sizing: border-box;
+    overflow: hidden;
+    &--title {
+        @extend .bio__header;
+        padding-top: 5vh;
+    }
+    &--photo {
+        @extend .band__photo;
+        padding: 1vh 3vw;
+        display: flex;
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+        transition: transform .3s;
+        &:hover {
+            filter: none;
+            transform: scale(1.1);
+            z-index: 1;
+        }
+    }
+}
+
+// form styles
+.comments {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 7vh;
+    border-bottom: solid $mercury 1px;
+    margin: 0 3vw;
+    &__header {
+        @extend .bio__header;
+    }
+    &__photo {
+        height: 60px;
+        width: 60px;
+        border-radius: 100%;
+        display: flex;
+        margin: 4vh 3vw 0 0;
+    }
+    &__form {
+        &--input {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+        &--name {
+            display: flex;
+            width: 100%;
+            color: $silver;
+            font-weight: 800;
+            font-size: 0.9rem;
+            padding: 1vh 0;
+        }
+        &--username {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            box-sizing: border-box;
+            height: 8vh;
+            font-family: standard-font;
+            font-size: 1.1rem;
+            color: $header-color;
+            padding-left: 2vw;
+            border: $header-color 2px solid;
+            border-radius: 5px;
+            background-color: $alabaster;
+        }
+        &--comment {
+            display: flex;
+            flex-direction: column;
+            color: $silver;
+            font-weight: 800;
+            font-size: 0.9rem;
+            padding: 4vh 0 1vh 0;
+        }
+        &--text {
+            width: 100%;
+            box-sizing: border-box;
+            font-family: standard-font;
+            padding: 2vh 2vw;
+            height: 12vh;
+            border: $mercury 1px solid;
+            border-radius: 5px;
+            background-color: $alabaster;
+            margin-bottom: 3vh;
+        }
+        &--submit {
+            width: 100%;
+            height: 7vh;
+            text-align: center;
+            color: $white;
+            background-color: $header-color;
+            font-weight: 700;
+            padding: 1.5vh 0;
+            border: none;
+            border-radius: 5px;
+        }
+    }
+}
+// new comment styles
+#commentContent {
+    padding-bottom: 3vh;
+}
+.commentDiv {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 3vh;
+    border-bottom: solid $mercury 1px;
+    margin: 4vh 2vw;
+}
+.photoDiv {
+    // height: 60px;
+    // width: 60px;
+    // border-radius: 100%;
+    // margin: 4vh 3vw 0 0;
+    display: flex;
+
+}
+.profilePhoto {
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    display: flex;
+    margin: 0 3vw 0 0;
+}
+.inputDiv {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    box-sizing: border-box;
+    // margin
+}
+.nameDateDiv {
+    display: flex;
+    justify-content: space-between;
+    padding: 1vh 0;
+}
+.nameDiv {
+    display: flex;
+    font-family: semi-bold-font;
+    color: $header-color;
+}
+.dateDiv {
+    display: flex;
+    color: $silver;
+}
+.textDiv {
+    color: $header-color;
+    font-weight: 300;
+    line-height: 1.3rem;
+    padding-top: 1vh;
+    max-width: 100%;
+    box-sizing: border-box;
+    word-wrap: break-word;
+}
+
+// FOOTER STYLES
+.home__footer {
+    background-color: $header-color;
+    padding: 7vh 3vw;
+    & * {
+        color: $white;
+    }
+    &--header {
+        @extend .bio__header;
+        margin: 0;
+        font-size: 2.5rem;
+        padding: 1vh 0;
+    }
+    &--icons * {
+        padding: 3vh 1vh;
+        transition: transform .3s;
+        &:hover {
+            transform: scale(1.5);
+        }
+    }
+    &--names {
+        @include paragraph-font();
+        @include footer-spacing();
+        color: $white;
+     }
+    &--info {
+        @include paragraph-font();
+        @include footer-spacing();
+        color: $mercury;
+        & * {
+            text-decoration: none;
+            color: $mercury;
+        }
+    }
+    &--logo {
+        display: none;
+    }
+}
+
+#home__footer--legal {
+    padding-top: 4vh;
+    margin-right: 15vw;
+}
