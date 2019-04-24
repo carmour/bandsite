@@ -1,4 +1,12 @@
 
+// linking API
+var projectURL = "https://project-1-api.herokuapp.com/"
+
+
+
+
+
+
 // Prevent page from refreshing on comment submit
 var form = document.getElementById('comments__form');
 form.onsubmit = (e) => {
@@ -73,7 +81,8 @@ function commentCreator(commentArray) {
         var commentObj = {
             name: commentArray[i].name,
             comment: commentArray[i].comment,
-            date: commentArray[i].date
+            date: commentArray[i].date,
+            // photo: commentArray[i].photo
         };
         var commentDiv = buildComment(commentArray[i]);
         var commentContent = document.querySelector('#commentContent');
@@ -102,7 +111,7 @@ button.onclick = () => {
         name: userName.value,
         comment: userComment.value,
         date: mm+'/'+dd+'/'+yyyy,
-        photo: "bandsite-photos/Mohan-muruge.jpg"
+        photo: "bandsite-photos/mohan-2.PNG"
     }
     // unshifts new object to array
     ourUsers.unshift(newEntry);

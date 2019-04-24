@@ -237,13 +237,22 @@ body {
 }
 
 .comments__photo {
-  height: 60px;
+  background-image: url("../bandsite-photos/Mohan-muruge.jpg");
+  background-size: cover;
+  background-position: left;
   width: 60px;
+  height: 60px;
   border-radius: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin: 4vh 3vw 0 0;
+}
+
+.comments__photo--user {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
 }
 
 .comments__form--input {
@@ -346,19 +355,18 @@ body {
 }
 
 .photoDiv {
+  width: 60px;
+  height: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 0 3vw 0 0;
 }
 
 .profilePhoto {
   height: 60px;
   width: 60px;
   border-radius: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0 3vw 0 0;
 }
 
 .inputDiv {
@@ -405,9 +413,7 @@ body {
   line-height: 1.3rem;
   padding-top: 1vh;
   max-width: 100%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  word-wrap: break-word;
+  word-break: break-word;
 }
 
 .home__footer {

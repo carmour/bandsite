@@ -30,7 +30,6 @@
 // DOCUMENT STYLES
 body {
     font-family: standard-font;
-    // margin: 0;
 }
 
 // HEADER STYLES
@@ -39,7 +38,6 @@ body {
     flex-direction: column;
     background-color: $header-color;
 }
-
 .header__title {
     text-align: center;
     margin: 0;
@@ -51,7 +49,6 @@ body {
         transform: scale(1.3);
     }
 }
-
 .header__nav {
     display: flex;
     justify-content: space-around;
@@ -75,7 +72,6 @@ body {
         transform: scale(1.9);
     }
 }
-
 #header__nav--current {
     color: $white;
     border-bottom: 3px solid $white;
@@ -83,7 +79,6 @@ body {
         transform: none;
     }
 }
-
 .hero__img {
     background-image: url('../bandsite-photos/sean-mungur-441728-unsplash.jpg');
     background-size: cover;
@@ -184,11 +179,19 @@ body {
         @extend .bio__header;
     }
     &__photo {
-        height: 60px;
+        background-image: url("../bandsite-photos/Mohan-muruge.jpg");
+        background-size: cover;
+        background-position: left;
         width: 60px;
+        height: 60px;
         border-radius: 100%;
         display: flex;
         margin: 4vh 3vw 0 0;
+        &--user {
+            width: 60px;
+            height: 60px;
+            border-radius: 100%;
+        }
     }
     &__form {
         &--input {
@@ -262,26 +265,21 @@ body {
     margin: 4vh 2vw;
 }
 .photoDiv {
-    // height: 60px;
-    // width: 60px;
-    // border-radius: 100%;
-    // margin: 4vh 3vw 0 0;
+    width: 60px;
+    height: 60px;
     display: flex;
-
+    margin: 0 3vw 0 0;
 }
 .profilePhoto {
     height: 60px;
     width: 60px;
     border-radius: 100%;
-    display: flex;
-    margin: 0 3vw 0 0;
-}
+}   
 .inputDiv {
     display: flex;
     flex-direction: column;
     max-width: 100%;
     box-sizing: border-box;
-    // margin
 }
 .nameDateDiv {
     display: flex;
@@ -303,8 +301,9 @@ body {
     line-height: 1.3rem;
     padding-top: 1vh;
     max-width: 100%;
-    box-sizing: border-box;
-    word-wrap: break-word;
+    // box-sizing: border-box;
+    // word-wrap: break-word;
+    word-break: break-word;
 }
 
 // FOOTER STYLES
