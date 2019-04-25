@@ -1,13 +1,26 @@
+// {"api_key":"beb87a9b-5906-4cfe-889b-eda759555051"}
+// https://project-1-api.herokuapp.com/comments?api_key=beb87a9b-5906-4cfe-889b-eda759555051
+// 
 
 // linking API
-var projectURL = "https://project-1-api.herokuapp.com/"
+// accessing comments
+var accessAPI = "https://project-1-api.herokuapp.com/comments?api_key=beb87a9b-5906-4cfe-889b-eda759555051"
+axios
+    .get(accessAPI)
+    .then(function(response) {
+        // console.log(response)
+        console.log(response.data[0].comment)
+        // ^provides us with access to the individual comments!
+        // just pump these into the comments areas, just like
+        // we did with the hard coded comments below -- same style,
+        // with the object.<name>
+    })
 
 
 
-
-
-
+// ORIGINAL JAVASCRIPT
 // Prevent page from refreshing on comment submit
+// supposed to be addEventListener
 var form = document.getElementById('comments__form');
 form.onsubmit = (e) => {
     e.preventDefault();
@@ -93,13 +106,21 @@ commentCreator(ourUsers)
 
 // Unshift new comments to pre-existing array, add new comments
 // to page
+
 var button = document.querySelector('#comments__button');
-button.onclick = () => {
+// button.onclick = () => {
+// added event listener instead of onclick() function
+button.addEventListener("click", () => {
     // takes user input to create new object
     var userName = document.querySelector('#userName');
     var nameContent = document.querySelector('#commentContent');
     var newName = document.createElement('div');
     var userComment = document.querySelector('#userComment');
+    // trying to require comment input for comment to submit
+    if (userComment.value === '') {
+        alert("Please write a comment before attempting to submit")
+        return false
+    } 
     var commentContent = document.querySelector('#commentContent');
     var newComment = document.createElement('div');
     var today = new Date();
@@ -121,7 +142,7 @@ button.onclick = () => {
     userName.value = 'Mohan Muruge'
     // comment box is cleared after each comment
     userComment.value = ''
-}
+})
 
 
 
