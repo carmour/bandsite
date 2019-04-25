@@ -9,11 +9,16 @@ axios
     .get(accessAPI)
     .then(function(response) {
         // console.log(response)
-        console.log(response.data[0].comment)
-        // ^provides us with access to the individual comments!
-        // just pump these into the comments areas, just like
-        // we did with the hard coded comments below -- same style,
-        // with the object.<name>
+       
+        // this adds the comments to the webpage just as divs
+        response.data.forEach(function(comment) {
+            console.log(comment.comment)
+            const testingComments = document.createElement('div')
+            testingComments.innerHTML = comment.comment
+            var APICommentTest = document.getElementById('API__comment')
+            APICommentTest.appendChild(testingComments)
+        })
+
     })
 
 
