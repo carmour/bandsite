@@ -1,0 +1,64 @@
+@media (min-width: 685px) {
+    .about__img--title {
+        font-family: bold-font;
+        font-size: 1.7rem; 
+        padding-bottom: 3vh;
+    }
+    .about__img--caption {
+        padding-right: 12vw;
+    }
+    .sound__byte {
+        width: 65%;
+    }
+    tbody {
+        width: 100%;
+    }
+    .shows {
+        &__table {
+            width: 100%;
+            flex-direction: row;
+        }
+        &__title {
+            padding: 4vh 0;
+        }
+        &__section {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &__descriptors--tablet {
+            color: $silver;
+            display: flex;
+            font-size: 0.9rem;
+            font-weight: 700; 
+            padding-bottom: 4vh;
+            & * {
+                padding: 0;
+            }
+        }
+        &__descriptor {
+            display: none;
+        }
+        &__tablet--date {
+            width: 28%;
+        }
+        &__tablet--details {
+            width: 22%;
+        }
+        &__date {
+            width: 28%;
+            padding: 0;
+        }
+        &__details {
+            padding: 0;
+            width: 22%;
+        }
+        &__tickets {
+            width: 28%;
+        }
+        &__button {
+            width: 100%;
+            font-family: semi-bold-font;
+        }
+    }
+}
