@@ -2,11 +2,6 @@
 // https://project-1-api.herokuapp.com/comments?api_key=beb87a9b-5906-4cfe-889b-eda759555051
 // 
 
-// linking API
-// accessing comments
-
-
-
 // ORIGINAL JAVASCRIPT
 // Prevent page from refreshing on comment submit
 // supposed to be addEventListener
@@ -40,21 +35,28 @@ form.onsubmit = (e) => {
 // new comments as well -- after they are put onto the API, they will immediately be
 // taken and put on the webpage in real time, using the same mechanism
 
+// request for API key
+// axios
+//     .get("https://project-1-api.herokuapp.com/register")
+//     .then(function(response) {
+//         console.log(response.data)
+//     })
+
+const accessAPI = "https://project-1-api.herokuapp.com/comments?api_key=06ce8b32-ff65-48ce-b587-e402a06d74d7"
 
 // SO, we need to build a new array!
 // but this time, from data from the API, rather than hard coded info
-// then, iterate through this array just like we did before, then 
-const accessAPI = "https://project-1-api.herokuapp.com/comments?api_key=beb87a9b-5906-4cfe-889b-eda759555051"
-axios
+// then, iterate through this array just like we did before, then 4371433e-7043-45c9-b98f-a76ff5ba89d4"
+const newOurUsers = []
+axios    
     .get(accessAPI)
     .then(function(response) {
-    const newOurUsers = []
         response.data.forEach(function(comment) {
-            newOurUsers.push(comment)
+            newOurUsers.unshift(comment)
         })
-        console.log(newOurUsers[0].comment)
-        // console.log(newOurUsers.length)
         commentCreator(newOurUsers)
+        // console.log(newOurUsers[0].comment)
+        // console.log(newOurUsers.length)
         // this creates the pre-existing comments!
     })
 
@@ -99,7 +101,6 @@ axios
 
 //             return commentDiv;
 //         })
-
 //     })
 
 // // Structures comments on bio page base on pre-existing objects, new inputs
@@ -189,34 +190,63 @@ function commentCreator(commentArray) {
 var button = document.querySelector('#comments__button');
 // button.onclick = () => {
 // added event listener instead of onclick() function
+// should be able to get rid of all the divs created, because this should
+// be done by the function above
 button.addEventListener("click", () => {
     // takes user input to create new object
     var userName = document.querySelector('#userName');
-    var nameContent = document.querySelector('#commentContent');
-    var newName = document.createElement('div');
     var userComment = document.querySelector('#userComment');
-    // trying to require comment input for comment to submit
-    if (userComment.value === '') {
-        alert("Please write a comment before attempting to submit")
-        return false
-    } 
     var commentContent = document.querySelector('#commentContent');
-    var newComment = document.createElement('div');
-    var today = new Date();
-    var dd = today.getDate();
-    var mm = today.getMonth()+1; 
-    var yyyy = today.getFullYear();
-    // creates new object based on new comment
-    var newEntry = {
-        name: userName.value,
-        comment: userComment.value,
-        date: mm+'/'+dd+'/'+yyyy,
-        photo: "bandsite-photos/mohan-2.PNG"
-    }
+    // const newUserName = userName.value
+    // const newUserComment = userComment.value
+    // const newCommentContent = {
+    //     name: userName.value,
+    //     comment: userComment.value
+    // }
+
+    // all functioning as it should 
+    axios
+        .post(accessAPI, {
+            name: userName.value,
+            comment: userComment.value
+        })
+        .then(response => {
+            console.log(response)
+            response.data.forEach(function(comment) {
+                newOurUsers.unshift(comment)
+            })
+            commentCreator(newOurUsers)
+
+            console.log(newOurUsers)
+
+            // commentCreator(newOurUsers)
+        })
+
+        // console.log(newOurUsers)
+    // should return a 404 error instead of this
+    // if (userComment.value === '') {
+        //     alert("Please write a comment before attempting to submit")
+        //     return false
+        // } 
+    // var newName = document.createElement('div');
+    // var newComment = document.createElement('div');
+    // var today = new Date();
+    // var dd = today.getDate();
+    // var mm = today.getMonth()+1; 
+    // var yyyy = today.getFullYear();
+    // // creates new object based on new comment
+    // var newEntry = {
+    //     name: userName.value,
+    //     comment: userComment.value,
+    //     date: mm+'/'+dd+'/'+yyyy,
+    //     photo: "bandsite-photos/mohan-2.PNG"
+    // }
     // unshifts new object to array
-    ourUsers.unshift(newEntry);
-    commentContent.innerText = ''
-    commentCreator(ourUsers)
+    // ourUsers.unshift(newEntry);
+    // commentContent.innerText = ''
+
+    // commentCreator(newOurUsers)
+
     // userName is locked at Mohan Muruge (same w/ image)
     userName.value = 'Mohan Muruge'
     // comment box is cleared after each comment
