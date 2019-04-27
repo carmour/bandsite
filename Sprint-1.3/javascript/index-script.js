@@ -51,7 +51,7 @@ function buildComment(commentInput) {
     if (timeElapsed < 1) {
         dateDiv.innerText = "Less than a day ago"
     } else if (timeElapsed > 1 && timeElapsed < 2) {
-        dateDiv.innerText = "1 Day ago"
+        dateDiv.innerText = "A day ago"
     } else {
         dateDiv.innerText = timeElapsed + " days ago";
     }
