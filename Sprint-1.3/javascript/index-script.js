@@ -38,7 +38,7 @@ function buildComment(commentInput) {
     var profilePhoto = document.createElement('img');
     photoDiv.classList.add('photoDiv');
     profilePhoto.classList.add('profilePhoto');
-    // profilePhoto.src = commentInput.photo;
+    profilePhoto.src = "bandsite-photos/mohan-2.PNG";
     photoDiv.appendChild(profilePhoto); 
     // create name div
     var nameDiv = document.createElement('div');
@@ -47,7 +47,16 @@ function buildComment(commentInput) {
     // create date div
     var dateDiv = document.createElement('div');
     dateDiv.classList.add('dateDiv');
-    dateDiv.innerText = commentInput.timestamp;
+    const timeElapsed = Math.floor((Date.now() - commentInput.timestamp)/(1000*60*60*24));
+    if (timeElapsed < 1) {
+        dateDiv.innerText = "Less than a day ago"
+    } else if (timeElapsed > 1 && timeElapsed < 2) {
+        dateDiv.innerText = "1 Day ago"
+    } else {
+        dateDiv.innerText = timeElapsed + " days ago";
+    }
+    // this gives us the datestamp in days...would be tough to
+    // parse it down farther than this
     // create text div
     var textDiv = document.createElement('div');
     textDiv.classList.add('textDiv');
@@ -71,12 +80,23 @@ function buildComment(commentInput) {
     return commentDiv;    
 }
 
+// calculating the time elapsed from timestamp
+// date now - date posted = time elapsed
+// time elapsed * seconds, minutes, etc...let's start w/ days
+console.log(Date.now())
+// const timeElapsed = (Date.now() - commentArray[i].timestamp)
+
+// this is the amount of days since 1970 or something
+console.log(Math.floor(Date.now()/(1000 * 60 * 60 *24)))
+
+
 function commentCreator(commentArray) {
     for (var i = 0; i < commentArray.length; i++) {
+        const timeElapsed = (Math.floor((Date.now() - commentArray[i].timestamp)/(1000 * 60 * 60 *24)))
         var commentObj = {
             name: commentArray[i].name,
             comment: commentArray[i].comment,
-            date: commentArray[i].timestamp,
+            date: commentArray[i].timestamp
             // photo: "bandsite-photos/light-grey.png"
             // photo: commentArray[i].photo
         };
@@ -104,8 +124,6 @@ button.addEventListener("click", () => {
     .then(response => {
             // console.log(response.data)
             newOurUsers.unshift(response.data)
-            // console.log(response.data.name)
-            // console.log(response.data.comment)
             commentCreator(newOurUsers)
         })
         console.log(newOurUsers)
