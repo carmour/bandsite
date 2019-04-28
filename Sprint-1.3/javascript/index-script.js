@@ -25,7 +25,11 @@ function getRequest() {
             response.data.forEach(function(comment) {
                 newOurUsers.unshift(comment)
                 for (let i = 0; i < newOurUsers.length; i++) {
-                    newOurUsers[i].image = "bandsite-photos/light-grey.png"
+                    if (newOurUsers[i].name === "Mohan Muruge") {
+                        newOurUsers[i].image = "bandsite-photos/mohan-2.PNG"
+                    } else {
+                        newOurUsers[i].image = "bandsite-photos/light-grey.png"
+                    }
                 }
             })
             // then, create the comment with those objects as well
@@ -44,7 +48,9 @@ function buildComment(commentInput) {
     photoDiv.classList.add('photoDiv');
     profilePhoto.classList.add('profilePhoto');
     profilePhoto.src = commentInput.image
-    // profilePhoto.src = "bandsite-photos/mohan-2.PNG";
+    if (commentInput.name === "Mohan Muruge") {
+        profilePhoto.src = "bandsite-photos/mohan-2.PNG";
+    }
     photoDiv.appendChild(profilePhoto); 
     // create name div
     var nameDiv = document.createElement('div');
@@ -61,8 +67,6 @@ function buildComment(commentInput) {
     } else {
         dateDiv.innerText = timeElapsed + " days ago";
     }
-    // this gives us the datestamp in days...would be tough to
-    // parse it down farther than this
     // create text div
     var textDiv = document.createElement('div');
     textDiv.classList.add('textDiv');
@@ -80,7 +84,7 @@ function buildComment(commentInput) {
     // create comment div
     var commentDiv = document.createElement('div');
     commentDiv.classList.add('commentDiv');
-    // commentDiv.appendChild(photoDiv);
+    commentDiv.appendChild(photoDiv);
     commentDiv.appendChild(inputDiv); 
 
     return commentDiv;    
@@ -94,7 +98,6 @@ function commentCreator(commentArray) {
         //     comment: commentArray[i].comment,
         //     date: commentArray[i].timestamp,
         //     photo: commentArray[i].image
-        //     // photo: commentArray[i].photo
         // };
         var commentDiv = buildComment(commentArray[i]);
         var commentContent = document.querySelector('#commentContent');
@@ -105,22 +108,17 @@ function commentCreator(commentArray) {
 // Unshift new comments to pre-existing array, add new comments
 // to page
 var button = document.querySelector('#comments__button');
-// console.log(newOurUsers)
 button.addEventListener("click", () => {
     // takes user input to create new object
     var userName = document.querySelector('#userName');
     var userComment = document.querySelector('#userComment');
     var commentContent = document.querySelector('#commentContent');
-    // newOurUsers = []
     axios
     .post(accessAPI, {
         name: userName.value,
         comment: userComment.value,
-        // photo: "mohan-2.PNG"
+        // image: "bandsite-photos/mohan-2.PNG"
         // ^^ this breaks the ability to post comments
-        // just add mohan's photo here?
-        // yes, post Mohan's picture, then make sure that 
-        // commentCreator adds it as well
     })
     .then(response => {
             // console.log(response.data)
