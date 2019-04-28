@@ -80,7 +80,7 @@ function buildComment(commentInput) {
     // create comment div
     var commentDiv = document.createElement('div');
     commentDiv.classList.add('commentDiv');
-    commentDiv.appendChild(photoDiv);
+    // commentDiv.appendChild(photoDiv);
     commentDiv.appendChild(inputDiv); 
 
     return commentDiv;    
@@ -116,7 +116,8 @@ button.addEventListener("click", () => {
     .post(accessAPI, {
         name: userName.value,
         comment: userComment.value,
-        image: "mohan-2.PNG"
+        // photo: "mohan-2.PNG"
+        // ^^ this breaks the ability to post comments
         // just add mohan's photo here?
         // yes, post Mohan's picture, then make sure that 
         // commentCreator adds it as well
