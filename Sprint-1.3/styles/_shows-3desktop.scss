@@ -24,19 +24,38 @@
     }
     .shows {
         display: flex;
-        flex-direction: columns;
+        // flex-direction: column;
+        flex-direction: row;
         padding: 2vw 12vw;
+        // & * {
+        //     flex-direction: column;
+        // }
+        // &:first-child {
+        //     display: flex;
+        //     flex-direction: column;
+        // }
         &__title {
             display: none;
             &--desktop {
                 display: flex;
+                flex-direction: column;
                 color: $header-color;
                 font-family: bold-font;
                 font-size: 2rem;
                 padding: 0vh 6vw 0 0;
             }
         }
+        &__desktop--columns {
+            display: flex;
+            flex-direction: column-reverse;
+            // & * {
+            //     display: flex;
+            //     flex-direction: column-reverse;
+            // }
+        }
         &__descriptors--tablet * {
+            display: flex;
+            // flex-direction: column-reverse;
             font-size: 0.7rem;
         }
         &__date {
@@ -44,6 +63,15 @@
         }
         &__details {
             font-size: 0.9rem;
+            padding-right: 2vw;
         }
+    }
+    .table__builder {
+        display: flex;
+        flex-direction: column;
+    }
+    .table__fixer--desktop {
+        display: flex;
+        flex-direction: column-reverse;
     }
 }

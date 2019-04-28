@@ -17,6 +17,9 @@
         &__table {
             width: 100%;
             flex-direction: row;
+            & * {
+                flex-direction: column;
+            }
         }
         &__title {
             padding: 4vh 0;
@@ -32,6 +35,7 @@
             font-size: 0.9rem;
             font-weight: 700; 
             padding-bottom: 4vh;
+            flex-direction: row;
             & * {
                 padding: 0;
             }
@@ -52,6 +56,7 @@
         &__details {
             padding: 0;
             width: 22%;
+            padding-right: 4vw;
         }
         &__tickets {
             width: 28%;
