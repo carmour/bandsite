@@ -24,11 +24,16 @@ function getRequest() {
         .then(function(response) {
             response.data.forEach(function(comment) {
                 newOurUsers.unshift(comment)
+                for (let i = 0; i < newOurUsers.length; i++) {
+                    newOurUsers[i].image = "bandsite-photos/light-grey.png"
+                }
             })
+            // then, create the comment with those objects as well
             commentCreator(newOurUsers)
         })
 }
 getRequest()
+console.log(newOurUsers)
 
 
 // // Structures comments on bio page base on pre-existing objects, new inputs
@@ -38,7 +43,8 @@ function buildComment(commentInput) {
     var profilePhoto = document.createElement('img');
     photoDiv.classList.add('photoDiv');
     profilePhoto.classList.add('profilePhoto');
-    profilePhoto.src = "bandsite-photos/mohan-2.PNG";
+    profilePhoto.src = commentInput.image
+    // profilePhoto.src = "bandsite-photos/mohan-2.PNG";
     photoDiv.appendChild(profilePhoto); 
     // create name div
     var nameDiv = document.createElement('div');
@@ -74,32 +80,22 @@ function buildComment(commentInput) {
     // create comment div
     var commentDiv = document.createElement('div');
     commentDiv.classList.add('commentDiv');
-    // commentDiv.appendChild(photoDiv);
+    commentDiv.appendChild(photoDiv);
     commentDiv.appendChild(inputDiv); 
 
     return commentDiv;    
 }
 
-// calculating the time elapsed from timestamp
-// date now - date posted = time elapsed
-// time elapsed * seconds, minutes, etc...let's start w/ days
-console.log(Date.now())
-// const timeElapsed = (Date.now() - commentArray[i].timestamp)
-
-// this is the amount of days since 1970 or something
-console.log(Math.floor(Date.now()/(1000 * 60 * 60 *24)))
-
-
 function commentCreator(commentArray) {
     for (var i = 0; i < commentArray.length; i++) {
-        const timeElapsed = (Math.floor((Date.now() - commentArray[i].timestamp)/(1000 * 60 * 60 *24)))
-        var commentObj = {
-            name: commentArray[i].name,
-            comment: commentArray[i].comment,
-            date: commentArray[i].timestamp
-            // photo: "bandsite-photos/light-grey.png"
-            // photo: commentArray[i].photo
-        };
+        // const timeElapsed = (Math.floor((Date.now() - commentArray[i].timestamp)/(1000 * 60 * 60 *24)))
+        // var commentObj = {
+        //     name: commentArray[i].name,
+        //     comment: commentArray[i].comment,
+        //     date: commentArray[i].timestamp,
+        //     photo: commentArray[i].image
+        //     // photo: commentArray[i].photo
+        // };
         var commentDiv = buildComment(commentArray[i]);
         var commentContent = document.querySelector('#commentContent');
         commentContent.appendChild(commentDiv);    
@@ -119,7 +115,11 @@ button.addEventListener("click", () => {
     axios
     .post(accessAPI, {
         name: userName.value,
-        comment: userComment.value
+        comment: userComment.value,
+        image: "mohan-2.PNG"
+        // just add mohan's photo here?
+        // yes, post Mohan's picture, then make sure that 
+        // commentCreator adds it as well
     })
     .then(response => {
             // console.log(response.data)
@@ -127,14 +127,15 @@ button.addEventListener("click", () => {
             commentCreator(newOurUsers)
         })
         console.log(newOurUsers)
-        
-        // userName is locked at Mohan Muruge (same w/ image)
+        // user is locked at Mohan Muruge, because he is the one signed in
         commentContent.innerText = ''
         userName.value = 'Mohan Muruge'
         // comment box is cleared after each comment
         userComment.value = ''
     })
 
+
+    
     // if (userComment.value === '') {
     //         alert("Please write a comment before attempting to submit")
     //         return false
