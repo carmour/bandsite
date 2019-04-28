@@ -38,7 +38,7 @@ function buildTable(tableInput) {
     // create venue td
     const showVenue = document.createElement('td');
     showVenue.classList.add('shows__details');
-    showVenue.innerHTML = tableInput.location;
+    showVenue.innerHTML = tableInput.place;
     // create location descriptor
     const locationDescriptor = document.createElement('td');
     locationDescriptor.classList.add('shows__descriptor');
@@ -50,7 +50,7 @@ function buildTable(tableInput) {
     // create the button, append here
     const showsButton = document.createElement('button');
     showsButton.classList.add('shows__button');
-    showsButton.innerHtml = "BUY TICKETS";
+    showsButton.innerText = "BUY TICKETS";
     // append the button into the shows__tickets div, then append
     // to tableBuilder
     const showsTickets = document.createElement('td');
@@ -64,7 +64,7 @@ function buildTable(tableInput) {
     showsSection.appendChild(venueDescriptor);
     showsSection.appendChild(showVenue);
     showsSection.appendChild(locationDescriptor);
-    showsSection.appendChild(showVenue);
+    showsSection.appendChild(showLocation);
     showsSection.appendChild(showsTickets);
     
     return showsSection;   
