@@ -97,8 +97,8 @@ function commentCreator(commentArray) {
 const button = document.querySelector('#comments__button');
 button.addEventListener("click", () => {
     // takes user input to create new object
-    const userName = document.querySelector('#userName');
-    const userComment = document.querySelector('#userComment');
+    const userName = document.querySelector('#user__name');
+    const userComment = document.querySelector('#user__comment');
     if (userComment.value === '') {
        alert("Please enter a comment before submitting")
         return false

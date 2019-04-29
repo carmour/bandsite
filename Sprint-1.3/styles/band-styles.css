@@ -327,11 +327,12 @@ body {
 
 .comments__form--submit {
   width: 100%;
-  height: 7vh;
+  height: 55px;
   text-align: center;
   color: #FFFFFF;
+  font-family: standard-font;
   background-color: #323232;
-  font-weight: 700;
+  font-weight: 600;
   padding: 1.5vh 0;
   border: none;
   border-radius: 5px;
@@ -604,7 +605,7 @@ body {
 
 .shows__descriptor {
   color: #AFAFAF;
-  font-weight: 550;
+  font-weight: 600;
   padding: 1vw 0;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
@@ -622,14 +623,15 @@ body {
   padding: 1vw 0 4vw 0;
 }
 
-.shows__tickets, .shows__button {
+.shows__tickets {
   width: 100%;
   text-align: center;
   color: #FFFFFF;
   background-color: #323232;
-  font-weight: 600;
-  padding: 1.5vh 0;
-  margin-top: 4vh;
+  font-weight: 400;
+  padding: 10px 0;
+  font-size: 1.2rem;
+  margin-top: 20px;
   border: none;
   border-radius: 5px;
   -webkit-box-align: center;
@@ -638,10 +640,21 @@ body {
 }
 
 .shows__button {
-  margin-top: none;
+  width: 100%;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #323232;
+  font-weight: 400;
+  padding: 10px 0;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-@media (min-width: 685px) {
+@media (min-width: 695px) {
   .page__header {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -730,8 +743,8 @@ body {
     color: #323232;
   }
   .comments__form--submit {
-    width: 35%;
-    margin-left: 65%;
+    width: 40%;
+    margin-left: 60%;
   }
   .comment__content {
     padding-bottom: 1vh;
@@ -934,7 +947,7 @@ body {
   }
 }
 
-@media (min-width: 685px) {
+@media (min-width: 695px) {
   .about__img--title {
     font-family: bold-font;
     font-size: 1.7rem;
@@ -984,7 +997,7 @@ body {
     display: flex;
     font-size: 0.9rem;
     font-weight: 700;
-    padding-bottom: 4vh;
+    padding-bottom: 20px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1011,12 +1024,14 @@ body {
     width: 22%;
     padding-right: 4vw;
   }
-  .shows__tickets, .shows__button {
+  .shows__tickets {
     width: 28%;
+    margin-top: 0;
   }
   .shows__button {
     width: 100%;
-    font-family: semi-bold-font;
+    font-family: standard-font;
+    font-size: 1rem;
   }
 }
 
@@ -1059,7 +1074,7 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    padding: 2vw 12vw;
+    padding: 35px 12vw;
   }
   .shows__title {
     display: none;
@@ -1098,6 +1113,9 @@ body {
   .shows__details {
     font-size: 0.9rem;
     padding-right: 2vw;
+  }
+  .shows__tickets {
+    padding: 8px 0;
   }
   .table__builder {
     display: -webkit-box;

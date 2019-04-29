@@ -241,11 +241,12 @@ body {
         }
         &--submit {
             width: 100%;
-            height: 7vh;
+            height: 55px;
             text-align: center;
             color: $white;
+            font-family: standard-font;
             background-color: $header-color;
-            font-weight: 700;
+            font-weight: 600;
             padding: 1.5vh 0;
             border: none;
             border-radius: 5px;

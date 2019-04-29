@@ -24,16 +24,8 @@
     }
     .shows {
         display: flex;
-        // flex-direction: column;
         flex-direction: row;
-        padding: 2vw 12vw;
-        // & * {
-        //     flex-direction: column;
-        // }
-        // &:first-child {
-        //     display: flex;
-        //     flex-direction: column;
-        // }
+        padding: 35px 12vw;
         &__title {
             display: none;
             &--desktop {
@@ -48,14 +40,9 @@
         &__desktop--columns {
             display: flex;
             flex-direction: column-reverse;
-            // & * {
-            //     display: flex;
-            //     flex-direction: column-reverse;
-            // }
         }
         &__descriptors--tablet * {
             display: flex;
-            // flex-direction: column-reverse;
             font-size: 0.7rem;
         }
         &__date {
@@ -64,6 +51,9 @@
         &__details {
             font-size: 0.9rem;
             padding-right: 2vw;
+        }
+        &__tickets {
+            padding: 8px 0;
         }
     }
     .table__builder {
