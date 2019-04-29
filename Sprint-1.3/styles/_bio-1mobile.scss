@@ -100,45 +100,44 @@ body {
 }
 
 // BIO STYLES
-.bio__header {
-    color: $header-color;
-    padding-left: 3vw;
-    font-family: bold-font;
-    font-size: 1.8rem;
-}
-
-.band__photo {
-    width: 100%;
-    height: auto;
-    padding: 0 3vw;
-    box-sizing: border-box;
-}
-
-.band__quote {
-    @include header-font();
-    padding: 2vh;
-    &--name {
-        @include header-font();
-        padding: 4%;
-        font-size: 1rem;
+.bio {
+    &__header {
+        color: $header-color;
+        padding-left: 3vw;
+        font-family: bold-font;
+        font-size: 1.8rem;
+    }
+    &__title {
+        @extend .band__quote;
+        padding: 4vh 2vh;
+    }
+    &__paragraphs {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 3vh;
+        &--para {
+            @include paragraph-font();
+            padding: 0 2vh 3vh 2vh;
+            line-height: 1.6rem;
+        }
     }
 }
-
-.bio__title {
-    @extend .band__quote;
-    padding: 4vh 2vh;
-}
-
-.bio__paragraphs {
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 3vh;
-}
-
-.bio__paragraphs--para {
-    @include paragraph-font();
-    padding: 0 2vh 3vh 2vh;
-    line-height: 1.6rem;
+.band {
+    &__photo {
+        width: 100%;
+        height: auto;
+        padding: 0 3vw;
+        box-sizing: border-box;
+    }
+    &__quote {
+        @include header-font();
+        padding: 2vh;
+        &--name {
+            @include header-font();
+            padding: 4%;
+            font-size: 1rem;
+        }
+    }
 }
 
 // PHOTO GALLERY STYLES
@@ -254,57 +253,55 @@ body {
     }
 }
 // new comment styles
-#commentContent {
+#comment__content {
     padding-bottom: 3vh;
 }
-.commentDiv {
+.comment__div {
     display: flex;
     flex-direction: row;
     padding-bottom: 3vh;
     border-bottom: solid $mercury 1px;
     margin: 4vh 2vw;
 }
-.photoDiv {
+.photo__div {
     width: 60px;
     height: 60px;
     display: flex;
     margin: 0 3vw 0 0;
 }
-.profilePhoto {
+.profile__photo {
     height: 60px;
     width: 60px;
     border-radius: 100%;
 }   
-.inputDiv {
+.input__div {
     display: flex;
     flex-direction: column;
     max-width: 100%;
     box-sizing: border-box;
     flex-basis: 100%;
 }
-.nameDateDiv {
+.nameDate__div {
     width: 100%;
     display: flex;
     justify-content: space-between;
     padding: 1vh 0;
 }
-.nameDiv {
+.name__div {
     display: flex;
     font-family: semi-bold-font;
     color: $header-color;
 }
-.dateDiv {
+.date__div {
     display: flex;
     color: $silver;
 }
-.textDiv {
+.text__div {
     color: $header-color;
     font-weight: 300;
     line-height: 1.3rem;
     padding-top: 1vh;
     max-width: 100%;
-    // box-sizing: border-box;
-    // word-wrap: break-word;
     word-break: break-word;
 }
 
@@ -346,7 +343,6 @@ body {
         display: none;
     }
 }
-
 #home__footer--legal {
     padding-top: 4vh;
     margin-right: 15vw;

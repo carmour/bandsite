@@ -128,6 +128,29 @@ body {
   font-size: 1.8rem;
 }
 
+.bio__title {
+  padding: 4vh 2vh;
+}
+
+.bio__paragraphs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-bottom: 3vh;
+}
+
+.bio__paragraphs--para {
+  color: #323232;
+  font-size: 1rem;
+  font-family: standard-font;
+  padding: 0 2vh 3vh 2vh;
+  line-height: 1.6rem;
+}
+
 .band__photo, .photo__gallery--photo {
   width: 100%;
   height: auto;
@@ -163,29 +186,6 @@ body {
     font-size: 1.9rem;
     font-family: bold-font;
   }
-}
-
-.bio__title {
-  padding: 4vh 2vh;
-}
-
-.bio__paragraphs {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding-bottom: 3vh;
-}
-
-.bio__paragraphs--para {
-  color: #323232;
-  font-size: 1rem;
-  font-family: standard-font;
-  padding: 0 2vh 3vh 2vh;
-  line-height: 1.6rem;
 }
 
 .photo__gallery {
@@ -337,11 +337,11 @@ body {
   border-radius: 5px;
 }
 
-#commentContent {
+#comment__content {
   padding-bottom: 3vh;
 }
 
-.commentDiv {
+.comment__div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -354,7 +354,7 @@ body {
   margin: 4vh 2vw;
 }
 
-.photoDiv {
+.photo__div {
   width: 60px;
   height: 60px;
   display: -webkit-box;
@@ -363,13 +363,13 @@ body {
   margin: 0 3vw 0 0;
 }
 
-.profilePhoto {
+.profile__photo {
   height: 60px;
   width: 60px;
   border-radius: 100%;
 }
 
-.inputDiv {
+.input__div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -384,7 +384,7 @@ body {
       flex-basis: 100%;
 }
 
-.nameDateDiv {
+.nameDate__div {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -395,7 +395,7 @@ body {
   padding: 1vh 0;
 }
 
-.nameDiv {
+.name__div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -403,14 +403,14 @@ body {
   color: #323232;
 }
 
-.dateDiv {
+.date__div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   color: #AFAFAF;
 }
 
-.textDiv {
+.text__div {
   color: #323232;
   font-weight: 300;
   line-height: 1.3rem;
@@ -629,11 +629,16 @@ body {
   background-color: #323232;
   font-weight: 600;
   padding: 1.5vh 0;
+  margin-top: 4vh;
   border: none;
   border-radius: 5px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.shows__button {
+  margin-top: none;
 }
 
 @media (min-width: 685px) {
@@ -728,18 +733,18 @@ body {
     width: 35%;
     margin-left: 65%;
   }
-  .commentContent {
+  .comment__content {
     padding-bottom: 1vh;
   }
-  .commentDiv {
+  .comment__div {
     margin: 3vh 14vw;
   }
-  .nameDateDiv {
+  .nameDate__div {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
   }
-  .dateDiv {
+  .date__div {
     padding-left: 1vw;
     font-weight: 100;
   }
@@ -873,21 +878,21 @@ body {
     font-size: 0.8rem;
     padding-left: 1vw;
   }
-  .textDiv {
+  .text__div {
     padding-top: 0;
   }
-  .commentContent {
+  .comment__content {
     padding-bottom: 1vh;
   }
-  .commentDiv {
+  .comment__div {
     margin: 3vh 28vw;
   }
-  .nameDateDiv {
+  .nameDate__div {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
   }
-  .dateDiv {
+  .date__div {
     padding-left: 1vw;
     font-weight: 100;
   }

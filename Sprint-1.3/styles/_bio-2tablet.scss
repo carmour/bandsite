@@ -19,17 +19,17 @@
     }
     .hero__img {
         height: 65vh;
-    }
-    .hero__img--caption {
-        font-size: 4rem;
-        font-style: bold-font;
+        &--caption {
+            font-size: 4rem;
+            font-style: bold-font;
+        }
     }
     .band__quote {
         padding: 4vh 3vw 1vh 3vw;
-    }
-    .band__quote--name {
-        font-size: 1.5rem;
-        padding-left: 3vw;
+        &--name {
+            font-size: 1.5rem;
+            padding-left: 3vw;
+        }
     }
     .bio__paragraphs {
         flex-direction: row;
@@ -74,17 +74,17 @@
         }
     }
     // input comment styles
-    .commentContent {
+    .comment__content {
         padding-bottom: 1vh;
     }
-    .commentDiv {
+    .comment__div {
         margin: 3vh 14vw;
         // padding-bottom: 4vh;
     }
-    .nameDateDiv {
+    .nameDate__div {
         justify-content: flex-start;
     }
-    .dateDiv {
+    .date__div {
         padding-left: 1vw;
         font-weight: 100;
     }

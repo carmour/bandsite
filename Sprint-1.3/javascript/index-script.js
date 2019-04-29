@@ -32,7 +32,6 @@ function getRequest() {
         })
 }
 getRequest()
-console.log(newOurUsers)
 
 
 // // Structures comments on bio page base on pre-existing objects, new inputs
@@ -40,8 +39,8 @@ function buildComment(commentInput) {
     // create photo div
     const photoDiv = document.createElement('div');
     const profilePhoto = document.createElement('img');
-    photoDiv.classList.add('photoDiv');
-    profilePhoto.classList.add('profilePhoto');
+    photoDiv.classList.add('photo__div');
+    profilePhoto.classList.add('profile__photo');
     profilePhoto.src = commentInput.image
     if (commentInput.name === "Mohan Muruge") {
         profilePhoto.src = "bandsite-photos/mohan-2.PNG";
@@ -49,11 +48,11 @@ function buildComment(commentInput) {
     photoDiv.appendChild(profilePhoto); 
     // create name div
     const nameDiv = document.createElement('div');
-    nameDiv.classList.add('nameDiv');
+    nameDiv.classList.add('name__div');
     nameDiv.innerText = commentInput.name;
     // create date div
     const dateDiv = document.createElement('div');
-    dateDiv.classList.add('dateDiv');
+    dateDiv.classList.add('date__div');
     const timeElapsed = Math.floor((Date.now() - commentInput.timestamp)/(1000*60*60*24));
     if (timeElapsed < 1) {
         dateDiv.innerText = "Less than a day ago"
@@ -64,32 +63,32 @@ function buildComment(commentInput) {
     }
     // create text div
     const textDiv = document.createElement('div');
-    textDiv.classList.add('textDiv');
+    textDiv.classList.add('text__div');
     textDiv.innerText = commentInput.comment;
     // create name/date div
     const nameDateDiv = document.createElement('div');
-    nameDateDiv.classList.add('nameDateDiv');
+    nameDateDiv.classList.add('nameDate__div');
     nameDateDiv.appendChild(nameDiv);
     nameDateDiv.appendChild(dateDiv);
     // create input div
     const inputDiv = document.createElement('div');
-    inputDiv.classList.add('inputDiv');
+    inputDiv.classList.add('input__div');
     inputDiv.appendChild(nameDateDiv);
     inputDiv.appendChild(textDiv);
     // create comment div
     const commentDiv = document.createElement('div');
-    commentDiv.classList.add('commentDiv');
+    commentDiv.classList.add('comment__div');
     commentDiv.appendChild(photoDiv);
     commentDiv.appendChild(inputDiv); 
 
     return commentDiv;    
 }
 
+const commentContent = document.querySelector('#comment__content');
 function commentCreator(commentArray) {
     for (let i = 0; i < commentArray.length; i++) {
         const commentContainer = buildComment(commentArray[i]);
-        const commentContent = document.querySelector('#commentContent');
-        commentContent.appendChild(commentContainer);    
+        commentContent.appendChild(commentContainer);
     }
 }
 
@@ -110,16 +109,9 @@ button.addEventListener("click", () => {
         comment: userComment.value
     })
     .then(response => {
-            // if (userComment.value === '') {
-            //     reject(response)
-            // }
             newOurUsers.unshift(response.data)
             commentCreator(newOurUsers)
         })
-        // .catch(error => {
-        //     alert("Please enter a comment before attempting to submit")
-        // })
-        console.log(newOurUsers)
         // user is locked at Mohan Muruge, because he is the one signed in
         commentContent.innerText = ''
         userName.value = 'Mohan Muruge'
