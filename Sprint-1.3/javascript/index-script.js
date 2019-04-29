@@ -1,7 +1,5 @@
-// {"api_key":"beb87a9b-5906-4cfe-889b-eda759555051"}
-
-// ORIGINAL JAVASCRIPT
-var form = document.getElementById('comments__form');
+// prevents page from reloading on submit
+const form = document.getElementById('comments__form');
 form.onsubmit = (e) => {
     e.preventDefault();
 }
@@ -30,7 +28,6 @@ function getRequest() {
                     }
                 }
             })
-            // then, create the comment with those objects as well
             commentCreator(newOurUsers)
         })
 }
@@ -41,8 +38,8 @@ console.log(newOurUsers)
 // // Structures comments on bio page base on pre-existing objects, new inputs
 function buildComment(commentInput) {
     // create photo div
-    var photoDiv = document.createElement('div');
-    var profilePhoto = document.createElement('img');
+    const photoDiv = document.createElement('div');
+    const profilePhoto = document.createElement('img');
     photoDiv.classList.add('photoDiv');
     profilePhoto.classList.add('profilePhoto');
     profilePhoto.src = commentInput.image
@@ -51,11 +48,11 @@ function buildComment(commentInput) {
     }
     photoDiv.appendChild(profilePhoto); 
     // create name div
-    var nameDiv = document.createElement('div');
+    const nameDiv = document.createElement('div');
     nameDiv.classList.add('nameDiv');
     nameDiv.innerText = commentInput.name;
     // create date div
-    var dateDiv = document.createElement('div');
+    const dateDiv = document.createElement('div');
     dateDiv.classList.add('dateDiv');
     const timeElapsed = Math.floor((Date.now() - commentInput.timestamp)/(1000*60*60*24));
     if (timeElapsed < 1) {
@@ -66,21 +63,21 @@ function buildComment(commentInput) {
         dateDiv.innerText = timeElapsed + " days ago";
     }
     // create text div
-    var textDiv = document.createElement('div');
+    const textDiv = document.createElement('div');
     textDiv.classList.add('textDiv');
     textDiv.innerText = commentInput.comment;
     // create name/date div
-    var nameDateDiv = document.createElement('div');
+    const nameDateDiv = document.createElement('div');
     nameDateDiv.classList.add('nameDateDiv');
     nameDateDiv.appendChild(nameDiv);
     nameDateDiv.appendChild(dateDiv);
     // create input div
-    var inputDiv = document.createElement('div');
+    const inputDiv = document.createElement('div');
     inputDiv.classList.add('inputDiv');
     inputDiv.appendChild(nameDateDiv);
     inputDiv.appendChild(textDiv);
     // create comment div
-    var commentDiv = document.createElement('div');
+    const commentDiv = document.createElement('div');
     commentDiv.classList.add('commentDiv');
     commentDiv.appendChild(photoDiv);
     commentDiv.appendChild(inputDiv); 
@@ -89,29 +86,20 @@ function buildComment(commentInput) {
 }
 
 function commentCreator(commentArray) {
-    for (var i = 0; i < commentArray.length; i++) {
-        // const timeElapsed = (Math.floor((Date.now() - commentArray[i].timestamp)/(1000 * 60 * 60 *24)))
-        // var commentObj = {
-        //     name: commentArray[i].name,
-        //     comment: commentArray[i].comment,
-        //     date: commentArray[i].timestamp,
-        //     photo: commentArray[i].image
-        // };
-        var commentDiv = buildComment(commentArray[i]);
-        var commentContent = document.querySelector('#commentContent');
-        commentContent.appendChild(commentDiv);    
+    for (let i = 0; i < commentArray.length; i++) {
+        const commentContainer = buildComment(commentArray[i]);
+        const commentContent = document.querySelector('#commentContent');
+        commentContent.appendChild(commentContainer);    
     }
 }
 
 // Unshift new comments to pre-existing array, add new comments
 // to page
-var button = document.querySelector('#comments__button');
+const button = document.querySelector('#comments__button');
 button.addEventListener("click", () => {
     // takes user input to create new object
     const userName = document.querySelector('#userName');
     const userComment = document.querySelector('#userComment');
-    var commentContent = document.querySelector('#commentContent');
-
     if (userComment.value === '') {
        alert("Please enter a comment before submitting")
         return false
@@ -120,7 +108,6 @@ button.addEventListener("click", () => {
     .post(accessAPI, {
         name: userName.value,
         comment: userComment.value
-        // image: "bandsite-photos/mohan-2.PNG"
     })
     .then(response => {
             // if (userComment.value === '') {
@@ -139,31 +126,3 @@ button.addEventListener("click", () => {
         // comment box is cleared after each comment
         userComment.value = ''
     })
-
-
-
-    
-    // if (userComment.value === '') {
-    //         alert("Please write a comment before attempting to submit")
-    //         return false
-    //     } 
-    // should return a 404 error instead of this -- catch?
-    
-    // old javascript
-    // var newName = document.createElement('div');
-    // var newComment = document.createElement('div');
-    // var today = new Date();
-    // var dd = today.getDate();
-    // var mm = today.getMonth()+1; 
-    // var yyyy = today.getFullYear();
-    // // creates new object based on new comment
-    // var newEntry = {
-    //     name: userName.value,
-    //     comment: userComment.value,
-    //     date: mm+'/'+dd+'/'+yyyy,
-    //     photo: "bandsite-photos/mohan-2.PNG"
-    // }
-    // unshifts new object to array
-    // ourUsers.unshift(newEntry);
-
-    // commentCreator(newOurUsers)

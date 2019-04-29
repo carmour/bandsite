@@ -57,7 +57,7 @@ function buildTable(tableInput) {
     showsTickets.classList.add('shows__tickets');
     showsTickets.appendChild(showsButton);
     // create shows__section tr
-    var showsSection = document.createElement('tr');
+    const showsSection = document.createElement('tr');
     showsSection.classList.add('shows__section');
     showsSection.appendChild(dateDescriptor);
     showsSection.appendChild(showDate);
@@ -71,16 +71,10 @@ function buildTable(tableInput) {
 }
 
 function tableCreator(showsArray) {
-    for (var i = 0; i < showsArray.length; i++) {
-        // var commentObj = {
-            //     date: showsArray[i].date,
-            //     location: showsArray[i].location,
-            //     place: showsArray[i].place
-            // };
-        var showsSection = buildTable(showsArray[i]);
+    for (let i = 0; i < showsArray.length; i++) {
+        const showsSectionBuilder = buildTable(showsArray[i]);
         const showsTableBuilder = document.querySelector('#shows__tableBuilder');
-        showsTableBuilder.appendChild(showsSection)
-        // showsTableBuilder.appendChild(showsSection);    
+        showsTableBuilder.appendChild(showsSectionBuilder)
     }
 }
 tableCreator(showsInfo)
