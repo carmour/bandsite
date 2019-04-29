@@ -1,6 +1,4 @@
 // {"api_key":"beb87a9b-5906-4cfe-889b-eda759555051"}
-// https://project-1-api.herokuapp.com/comments?api_key=beb87a9b-5906-4cfe-889b-eda759555051
-// 
 
 // ORIGINAL JAVASCRIPT
 var form = document.getElementById('comments__form');
@@ -110,21 +108,30 @@ function commentCreator(commentArray) {
 var button = document.querySelector('#comments__button');
 button.addEventListener("click", () => {
     // takes user input to create new object
-    var userName = document.querySelector('#userName');
-    var userComment = document.querySelector('#userComment');
+    const userName = document.querySelector('#userName');
+    const userComment = document.querySelector('#userComment');
     var commentContent = document.querySelector('#commentContent');
+
+    if (userComment.value === '') {
+       alert("Please enter a comment before submitting")
+        return false
+    }
     axios
     .post(accessAPI, {
         name: userName.value,
-        comment: userComment.value,
+        comment: userComment.value
         // image: "bandsite-photos/mohan-2.PNG"
-        // ^^ this breaks the ability to post comments
     })
     .then(response => {
-            // console.log(response.data)
+            // if (userComment.value === '') {
+            //     reject(response)
+            // }
             newOurUsers.unshift(response.data)
             commentCreator(newOurUsers)
         })
+        // .catch(error => {
+        //     alert("Please enter a comment before attempting to submit")
+        // })
         console.log(newOurUsers)
         // user is locked at Mohan Muruge, because he is the one signed in
         commentContent.innerText = ''
@@ -132,6 +139,7 @@ button.addEventListener("click", () => {
         // comment box is cleared after each comment
         userComment.value = ''
     })
+
 
 
     
@@ -159,7 +167,3 @@ button.addEventListener("click", () => {
     // ourUsers.unshift(newEntry);
 
     // commentCreator(newOurUsers)
-
-
-
-
